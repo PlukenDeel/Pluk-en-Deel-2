@@ -1,0 +1,42 @@
+items:
+  - titel: "Plukdag"
+    emoji: "🧺"
+    kleur: "rood"
+    datums:
+      - datum: "Zaterdag 19 september 2026"
+        iso: "2026-09-19"
+        detail: "Verzamelen om 9.30 uur bij de Spil in Zweeloo. Start om 10.00 uur. Daarna koffie of thee."
+    tip: "🍎 Wie meeplukt, mag een emmer appels mee naar huis nemen!"
+
+  - titel: "Zelf geplukt inleveren"
+    emoji: "🏡"
+    kleur: "groen"
+    datums:
+      - datum: "17 & 18 september 2026"
+        iso: "2026-09-18"
+        detail: "Breng je appels naar Kruisstraat 9 bij Annemarie. Vragen? Bel Trees: 06 45 28 88 41."
+
+  - titel: "Schil- & moesmomenten"
+    emoji: "🔪"
+    kleur: "rood"
+    datums:
+      - datum: "Donderdag 24 september · 14.00 uur"
+        iso: "2026-09-24"
+        detail: "Korenhof (kookploeg welkom vanaf 13.30 uur)"
+      - datum: "Donderdag 8 oktober · 13.30 uur"
+        iso: "2026-10-08"
+        detail: "Korenhof"
+      - datum: "Woensdag 18 november · 13.30 uur"
+        iso: "2026-11-18"
+        detail: "Laatste schilmiddag — Korenhof"
+
+  - titel: "Verkopen"
+    emoji: "🛒"
+    kleur: "geel"
+    datums:
+      - datum: "7 oktober · 14.00–17.00 uur"
+        iso: "2026-10-07"
+        detail: "Markt bij de Korenhof in Aalden"
+      - datum: "27 & 28 november 2026"
+        iso: "2026-11-27"
+        detail: "Herfstvakantieverkoop bij de PLUS in Aalden: appelmoes, appelcompote en appeljam!"

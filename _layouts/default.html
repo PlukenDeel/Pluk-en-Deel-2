@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}</title>
+
+  <meta name="description" content="{{ page.description | default: site.description }}" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"         content="website" />
+  <meta property="og:url"          content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:title"        content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}" />
+  <meta property="og:description"  content="{{ page.description | default: site.description }}" />
+  <meta property="og:image"        content="{{ site.url }}/images/uploads/og-image.jpg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"       content="nl_NL" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}" />
+  <meta name="twitter:description" content="{{ page.description | default: site.description }}" />
+  <meta name="twitter:image"       content="{{ site.url }}/images/uploads/og-image.jpg" />
+
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/assets/css/main.css" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}",
+    "description": "{{ site.description }}"
+  }
+  </script>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Direct naar inhoud</a>
+
+  <header class="site-header" role="banner">
+    <nav aria-label="Hoofdnavigatie">
+      <a href="#top" class="nav-logo" aria-label="{{ site.title }} – naar boven scrollen">🍎 Pluk &amp; Deel</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#over">Over ons</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#meedoen">Meedoen</a></li>
+        <li><a href="#tijdlijn">Tijdlijn</a></li>
+        <li><a href="#aanmelden" class="nav-cta">Aanmelden →</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"
+        aria-label="Navigatiemenu openen"
+        aria-expanded="false"
+        aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">Pluk <span>&</span> Deel</div>
+        <p class="footer-intro">Een vrijwilligersproject in Zweeloo en Aalden (Drenthe). Appels plukken, jam maken, en de opbrengst weggeven aan de buurt.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footernavigatie">
+        <h4>Navigatie</h4>
+        <ul>
+          <li><a href="#over">Over Pluk &amp; Deel</a></li>
+          <li><a href="#agenda">Agenda {{ site.data.algemeen.seizoen }}</a></li>
+          <li><a href="#meedoen">Meedoen</a></li>
+          <li><a href="#tijdlijn">Tijdlijn</a></li>
+        </ul>
+      </nav>
+      <address class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://www.plukendeel.nl/contact/">Contactformulier</a></li>
+          <li>
+            <a href="tel:+31645288841" aria-label="Bel Trees, telefoonnummer 06 45 28 88 41">
+              06 45 28 88 41 (Trees)
+            </a>
+          </li>
+          <li>
+            <a href="http://facebook.com/share/1JrC9K9QGv"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Volg Pluk & Deel op Facebook (opent in nieuw tabblad)">
+              Facebook
+            </a>
+          </li>
+        </ul>
+      </address>
+    </div>
+    <div class="footer-bottom">© {{ site.data.algemeen.seizoen }} Pluk &amp; Deel · Zweeloo en Aalden, Drenthe</div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

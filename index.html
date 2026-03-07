@@ -1,0 +1,275 @@
+---
+layout: default
+---
+
+<!-- HERO -->
+<section class="hero" id="top" aria-label="Introductie">
+  <span class="apple" aria-hidden="true" style="left:8%;animation-duration:7s;animation-delay:0s">🍎</span>
+  <span class="apple" aria-hidden="true" style="left:22%;animation-duration:9s;animation-delay:2s;font-size:1.4rem">🍏</span>
+  <span class="apple" aria-hidden="true" style="left:62%;animation-duration:6s;animation-delay:1s">🍎</span>
+  <span class="apple" aria-hidden="true" style="left:82%;animation-duration:8s;animation-delay:3s;font-size:1.4rem">🍏</span>
+  <span class="apple" aria-hidden="true" style="left:44%;animation-duration:10s;animation-delay:4s">🍎</span>
+  <div class="hero-content">
+    <div class="hero-badge">📍 Zweeloo &amp; Aalden · Drenthe</div>
+    <h1>Van boom<br>naar <em>buurman</em></h1>
+    <p class="hero-sub">Elk jaar plukken we samen appels in Zweeloo en Aalden, maken er moes en jam van — en de opbrengst gaat naar een lokaal goed doel.</p>
+    <div class="hero-actions">
+      <a href="#aanmelden" class="btn-primary">Aanmelden als vrijwilliger</a>
+      <a href="#agenda" class="btn-ghost">Bekijk de agenda {{ site.data.algemeen.seizoen }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div><div class="stat-num">{{ site.data.algemeen.seizoen }}</div><div class="stat-label">Alweer een nieuw seizoen</div></div>
+    <div><div class="stat-num">{{ site.data.algemeen.aantal_vrijwilligers }}</div><div class="stat-label">Enthousiaste vrijwilligers</div></div>
+    <div><div class="stat-num">100%</div><div class="stat-label">Opbrengst naar goed doel</div></div>
+    <div><div class="stat-num" aria-hidden="true">♻️</div><div class="stat-label">Nul verspilling, meer verbinding</div></div>
+  </div>
+</div>
+
+<!-- OVER -->
+<section class="over fade-in" id="over" aria-labelledby="over-titel">
+  <div class="container">
+    <div class="over-grid">
+      <div class="over-text">
+        <p class="section-label" aria-hidden="true">Ons verhaal</p>
+        <h2 class="section-title" id="over-titel">Appels plukken,<br><em>samen delen</em></h2>
+        <p>Aan het einde van de zomer hangen veel appelbomen in en rond Zweeloo en Aalden vol met appels. Zonde om er niks mee te doen! Daarom organiseren we elk jaar een paar gezellige plukdagen.</p>
+        <p>We halen de appels van de bomen, maken er moes en jam van, en verkopen die weer. De opbrengst gaat naar een goed doel in de buurt — elk jaar kiezen we samen een ander doel uit.</p>
+        <p>Zo maken we met elkaar iets moois van de appels én van de opbrengst. Iedereen uit Zweeloo en Aalden kan meedoen!</p>
+      </div>
+      <div>
+        <div class="over-card">
+          <h3>Onze doelen</h3>
+          <ul class="doel-lijst">
+            <li>Voedselverspilling tegengaan door optimaal te benutten wat de aarde ons biedt</li>
+            <li>Saamhorigheid versterken door actief samen bezig te zijn</li>
+            <li>Lokale gemeenschap steunen door andere vrijwilligersinitiatieven te helpen</li>
+          </ul>
+          <div class="goed-doel-box">🎯 Goed doel {{ site.data.algemeen.seizoen }}: de <strong>{{ site.data.algemeen.goed_doel }}</strong> — {{ site.data.algemeen.goed_doel_uitleg }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENDA -->
+<section class="agenda fade-in" id="agenda" aria-labelledby="agenda-titel">
+  <div class="container">
+    <p class="section-label" aria-hidden="true">Wanneer</p>
+    <h2 class="section-title" id="agenda-titel">Agenda <em>{{ site.data.algemeen.seizoen }}</em></h2>
+    <p style="color:var(--tekst-zacht);max-width:560px;margin-top:.5rem;line-height:1.7;">Zet de data vast in je agenda! Iedereen is welkom.</p>
+    <div class="agenda-grid">
+      {% for kaart in site.data.agenda.items %}
+      <article class="agenda-kaart {% if kaart.kleur == 'groen' %}groen{% elsif kaart.kleur == 'geel' %}geel{% endif %}"
+               aria-labelledby="kaart-{{ forloop.index }}"
+               data-iso="{{ kaart.datums | last | map: 'iso' | first }}">
+        <span class="verlopen-label">Al geweest</span>
+        <span class="agenda-icon" aria-hidden="true">{{ kaart.emoji }}</span>
+        <h3 id="kaart-{{ forloop.index }}">{{ kaart.titel }}</h3>
+        {% for item in kaart.datums %}
+        <div class="agenda-item">
+          <div class="agenda-datum">
+            <time datetime="{{ item.iso }}">{{ item.datum }}</time>
+          </div>
+          <div class="agenda-detail">{{ item.detail }}</div>
+        </div>
+        {% endfor %}
+        {% if kaart.tip %}
+        <div class="agenda-tip">{{ kaart.tip }}</div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- MICRO-VOLUNTEERING -->
+<section class="micro fade-in" aria-labelledby="micro-titel">
+  <div class="container">
+    <p class="section-label" aria-hidden="true">Hoeveel tijd heb je?</p>
+    <h2 class="section-title" id="micro-titel">Elke bijdrage <em>telt</em></h2>
+    <p style="color:var(--tekst-zacht);max-width:560px;margin-top:.5rem;line-height:1.7;">Je hoeft geen heel seizoen beschikbaar te zijn. Kijk wat bij jouw agenda past.</p>
+    <div class="micro-grid">
+
+      <div class="micro-kaart">
+        <span class="micro-badge snel">⏱ 1–2 uur</span>
+        <h3>Even snel helpen</h3>
+        <p>Ideaal als je een vrije ochtend hebt of gewoon een keertje wil meedoen zonder verplichting.</p>
+        <ul class="micro-taken">
+          <li>Meeplukken op de plukdag</li>
+          <li>Appels afleveren bij een inzamelpunt</li>
+          <li>Potjes verkopen op de markt</li>
+          <li>Foto's maken van het event</li>
+        </ul>
+        <a href="#aanmelden" class="micro-cta">Ik heb een uurtje →</a>
+      </div>
+
+      <div class="micro-kaart">
+        <span class="micro-badge middag">🕑 Een middag</span>
+        <h3>Een middag erbij</h3>
+        <p>Een schilmiddag bij het Korenhof duurt een paar uur en is gezellig — koffie en thee zijn er altijd.</p>
+        <ul class="micro-taken">
+          <li>Schillen &amp; snijden</li>
+          <li>Appelmoes of jam koken</li>
+          <li>Potjes vullen en etiketteren</li>
+          <li>Opruimen na afloop</li>
+        </ul>
+        <a href="#aanmelden" class="micro-cta">Ik kom een middag →</a>
+      </div>
+
+      <div class="micro-kaart">
+        <span class="micro-badge seizoen">📅 Heel het seizoen</span>
+        <h3>Vaste vrijwilliger</h3>
+        <p>Wil je het hele project helpen dragen? Dan ben je van harte welkom in de werkgroep.</p>
+        <ul class="micro-taken">
+          <li>Meedenken en plannen</li>
+          <li>Contacten leggen met boom-eigenaren</li>
+          <li>Communicatie &amp; social media</li>
+          <li>Coördineren op de dag zelf</li>
+        </ul>
+        <a href="#aanmelden" class="micro-cta">Ik doe het hele seizoen →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOTO TIJDLIJN -->
+<section class="tijdlijn fade-in" id="tijdlijn" aria-labelledby="tijdlijn-titel">
+  <div class="container-titel">
+    <p class="section-label" aria-hidden="true">Van boom tot goed doel</p>
+    <h2 class="section-title" id="tijdlijn-titel">Het <em>verhaal</em> in stappen</h2>
+    <p class="tijdlijn-intro">Zo gaat een appel van de boom bij jou in de tuin naar een potje moes op de plank — en de opbrengst naar de buurt.</p>
+  </div>
+  <div class="tijdlijn-scroll" role="list" aria-label="Tijdlijn van het plukproces">
+    {% for stap in site.data.tijdlijn.stappen %}
+    <div class="tijdlijn-kaart" role="listitem">
+      {% assign foto_pad = "/images/uploads/" | append: stap.foto %}
+      <div class="tijdlijn-foto-placeholder" aria-hidden="true">{{ stap.emoji }}</div>
+      <img class="tijdlijn-foto"
+           src="{{ foto_pad }}"
+           alt="{{ stap.foto_alt }}"
+           loading="lazy"
+           onerror="this.style.display='none';this.previousElementSibling.style.display='flex'">
+      <div class="tijdlijn-body">
+        <div class="tijdlijn-stap-nr" aria-label="Stap {{ stap.stap }}">{{ stap.stap }}</div>
+        <div class="tijdlijn-maand">{{ stap.maand }}</div>
+        <h3>{{ stap.titel }}</h3>
+        <p>{{ stap.omschrijving }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <p class="tijdlijn-hint" aria-hidden="true">← Scroll om het hele proces te zien →</p>
+</section>
+
+<!-- WERKGROEP -->
+<section class="werkgroep fade-in" aria-labelledby="werkgroep-titel">
+  <div class="container">
+    <p class="section-label" aria-hidden="true">De mensen erachter</p>
+    <h2 class="section-title" id="werkgroep-titel">Werkgroep <em>{{ site.data.algemeen.seizoen }}</em></h2>
+    <p style="color:var(--tekst-zacht);margin-top:.5rem;line-height:1.7;max-width:500px;">Een geweldige groep vrijwilligers uit Zweeloo en Aalden.</p>
+    <ul class="namen-grid" aria-label="Werkgroepleden">
+      {% for lid in site.data.werkgroep.leden %}
+      <li class="naam-chip">{{ lid }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- IMPACT DASHBOARD -->
+<section class="impact fade-in" aria-labelledby="impact-titel">
+  <div class="container">
+    <p class="section-label" aria-hidden="true">Wat we samen bereikten</p>
+    <h2 class="section-title" id="impact-titel">Tien jaar <em>oogsten</em></h2>
+    <p class="impact-intro">Elk seizoen zijn het de kleine bijdragen die samen groot worden. Dit is wat Pluk &amp; Deel tot nu toe heeft opgeleverd.</p>
+    <div class="impact-grid">
+      <div class="impact-kaart">
+        <span class="impact-emoji" aria-hidden="true">🍎</span>
+        <span class="impact-getal" data-doel="{{ site.data.algemeen.impact.kilo_appels }}">0</span>
+        <span class="impact-label">kilo appels geoogst</span>
+      </div>
+      <div class="impact-kaart">
+        <span class="impact-emoji" aria-hidden="true">🍯</span>
+        <span class="impact-getal" data-doel="{{ site.data.algemeen.impact.potjes }}">0</span>
+        <span class="impact-label">potjes moes &amp; jam gemaakt</span>
+      </div>
+      <div class="impact-kaart">
+        <span class="impact-emoji" aria-hidden="true">🤝</span>
+        <span class="impact-getal" data-doel="{{ site.data.algemeen.impact.vrijwilligersuren }}">0</span>
+        <span class="impact-label">vrijwilligersuren ingezet</span>
+      </div>
+      <div class="impact-kaart">
+        <span class="impact-emoji" aria-hidden="true">🎯</span>
+        <span class="impact-getal" data-doel="{{ site.data.algemeen.impact.goede_doelen }}">0</span>
+        <span class="impact-label">goede doelen ondersteund</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AANMELDEN -->
+<section class="aanmelden-sectie fade-in" id="aanmelden" aria-labelledby="aanmeld-titel">
+  <div class="container">
+    <div class="aanmeld-wrap">
+      <div class="aanmeld-uitleg">
+        <p class="section-label" aria-hidden="true">Doe mee</p>
+        <h2 class="section-title" id="aanmeld-titel">Jouw handen,<br><em>onze oogst</em></h2>
+        <p>Of je nu een uurtje hebt of het hele seizoen mee wilt doen — er is altijd een plek voor jou bij Pluk &amp; Deel.</p>
+        <p>Laat ons weten wat je kunt en wilt bijdragen. We nemen contact op zodra de planning rond is voor jouw onderdeel.</p>
+        <p><strong>Appelbomen beschikbaar stellen?</strong> Dat kan ook via dit formulier. Vermeld het bij het tekstveld onderin.</p>
+      </div>
+      <div class="aanmeld-form" role="form" aria-label="Aanmeldformulier Pluk &amp; Deel">
+        <h3>Meld je aan voor {{ site.data.algemeen.seizoen }}</h3>
+        <div id="formInhoud">
+          <div class="form-stap">
+            <label for="naam">Je naam <span aria-hidden="true">*</span></label>
+            <input type="text" id="naam" name="naam" autocomplete="name" required placeholder="Voor- en achternaam" />
+          </div>
+          <div class="form-stap">
+            <label for="email">E-mailadres <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="jouw@email.nl" />
+          </div>
+          <div class="form-stap">
+            <label for="woonplaats">Woonplaats</label>
+            <select id="woonplaats" name="woonplaats">
+              <option value="">— Kies je woonplaats —</option>
+              <option>Zweeloo</option>
+              <option>Aalden</option>
+              <option>Elders in de buurt</option>
+            </select>
+          </div>
+          <div class="form-stap">
+            <label>Wat kun jij meebrengen?</label>
+            <div class="skill-grid" role="group" aria-label="Selecteer je vaardigheden">
+              <label class="skill-optie"><input type="checkbox" name="skill" value="plukken"> <span>🍎 Appels plukken</span></label>
+              <label class="skill-optie"><input type="checkbox" name="skill" value="schillen"> <span>🔪 Schillen &amp; koken</span></label>
+              <label class="skill-optie"><input type="checkbox" name="skill" value="verkopen"> <span>🛒 Verkopen</span></label>
+              <label class="skill-optie"><input type="checkbox" name="skill" value="rijden"> <span>🚗 Rijden / vervoer</span></label>
+              <label class="skill-optie"><input type="checkbox" name="skill" value="fotograferen"> <span>📷 Fotograferen</span></label>
+              <label class="skill-optie"><input type="checkbox" name="skill" value="socialmedia"> <span>📱 Social media</span></label>
+              <label class="skill-optie"><input type="checkbox" name="skill" value="administratie"> <span>📋 Administratie</span></label>
+              <label class="skill-optie"><input type="checkbox" name="skill" value="anders"> <span>✨ Iets anders</span></label>
+            </div>
+          </div>
+          <div class="form-stap">
+            <label for="opmerking">Toelichting of vraag</label>
+            <textarea id="opmerking" name="opmerking" placeholder="Bijv. ik heb een appelboom in de tuin, of ik kan alleen op zaterdagen..."></textarea>
+          </div>
+          <button type="button" class="form-verzenden" onclick="verstuurFormulier()">
+            Aanmelden →
+          </button>
+        </div>
+        <div class="form-succes" id="formSucces" aria-live="polite">
+          <span class="succes-icon">🍎</span>
+          <h4>Gelukt, bedankt!</h4>
+          <p>We hebben je aanmelding ontvangen en nemen binnenkort contact op. Tot dan — en tot de oogst!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

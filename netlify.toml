@@ -1,0 +1,16 @@
+[build]
+  command   = "jekyll build"
+  publish   = "_site"
+
+[build.environment]
+  JEKYLL_ENV = "production"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

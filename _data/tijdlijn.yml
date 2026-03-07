@@ -1,0 +1,56 @@
+stappen:
+  - stap: 1
+    titel: "Bomen scouten"
+    omschrijving: "We brengen appelbomen in kaart bij eigenaren in Zweeloo en Aalden die meer appels hebben dan ze kunnen gebruiken."
+    emoji: "🗺️"
+    foto: "foto-scouten.jpg"
+    foto_alt: "Vrijwilliger noteert appelbomen op een kaart"
+    maand: "Juli"
+
+  - stap: 2
+    titel: "Plukdag"
+    omschrijving: "Op een zonnige septemberochtend trekken we er met z'n allen op uit. Ladders, manden, en goede zin."
+    emoji: "🧺"
+    foto: "foto1.jpg"
+    foto_alt: "Vrijwilligers plukken appels uit een appelboom"
+    maand: "September"
+
+  - stap: 3
+    titel: "Inzamelen"
+    omschrijving: "Wie thuis appels heeft liggen, brengt ze naar het inzamelpunt bij Annemarie. Elke appel telt."
+    emoji: "🏡"
+    foto: "foto2.jpg"
+    foto_alt: "Manden vol appels bij het inzamelpunt"
+    maand: "September"
+
+  - stap: 4
+    titel: "Schillen & koken"
+    omschrijving: "De gezelligste middagen van het jaar: samen schillen, snijden en koken bij het Korenhof in Aalden."
+    emoji: "🔪"
+    foto: "foto3.jpg"
+    foto_alt: "Vrijwilligers schillen appels aan tafel in het Korenhof"
+    maand: "Oktober"
+
+  - stap: 5
+    titel: "Potten vullen"
+    omschrijving: "De warme moes gaat in potjes, die daarna worden gelabeld en klaargemaakt voor de verkoop."
+    emoji: "🍯"
+    foto: "foto4.jpg"
+    foto_alt: "Potjes appelmoes worden gevuld en gelabeld"
+    maand: "Oktober"
+
+  - stap: 6
+    titel: "Verkopen"
+    omschrijving: "Op de markt en bij de PLUS in Aalden verkopen we de potjes. De opbrengst gaat naar het goede doel."
+    emoji: "🛒"
+    foto: "foto5.jpg"
+    foto_alt: "Verkoopkraam met appelmoes en jam bij de PLUS"
+    maand: "November"
+
+  - stap: 7
+    titel: "Donatie"
+    omschrijving: "De volledige opbrengst gaat naar een lokaal goed doel. Elk jaar kiezen we samen wie dat doel is."
+    emoji: "🎯"
+    foto: "foto6.jpg"
+    foto_alt: "Werkgroep overhandigt donatie aan het goede doel"
+    maand: "December"
