@@ -2,8 +2,7 @@ backend:
   name: github
   repo: plukendeel/Pluk-en-Deel-2
   branch: main
-  base_url: https://JOUW-WORKER.workers.dev
-  # ↑ Vervang dit door jouw Cloudflare Worker URL na stap 1 in de handleiding
+  base_url: https://plukendeel-cms-auth.itf-filosofie-info.workers.dev
 
 # Mediabestanden (foto's) worden hier opgeslagen
 media_folder: "images/uploads"
