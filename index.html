@@ -9,13 +9,20 @@ layout: default
   <span class="apple" aria-hidden="true" style="left:62%;animation-duration:6s;animation-delay:1s">🍎</span>
   <span class="apple" aria-hidden="true" style="left:82%;animation-duration:8s;animation-delay:3s;font-size:1.4rem">🍏</span>
   <span class="apple" aria-hidden="true" style="left:44%;animation-duration:10s;animation-delay:4s">🍎</span>
-  <div class="hero-content">
-    <div class="hero-badge">📍 Zweeloo &amp; Aalden · Drenthe</div>
-    <h1>Van boom<br>naar <em>buurman</em></h1>
-    <p class="hero-sub">Elk jaar plukken we samen appels in Zweeloo en Aalden, maken er moes en jam van — en de opbrengst gaat naar een lokaal goed doel.</p>
-    <div class="hero-actions">
-      <a href="#aanmelden" class="btn-primary">Aanmelden als vrijwilliger</a>
-      <a href="#agenda" class="btn-ghost">Bekijk de agenda {{ site.data.algemeen.seizoen }}</a>
+  <div class="hero-inner">
+    <div class="hero-logo-wrap">
+      <img src="{{ '/images/pluk_en_deel_logo.png' | prepend: site.baseurl }}"
+           alt="Pluk & Deel logo"
+           class="hero-logo" />
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">📍 Zweeloo &amp; Aalden · Drenthe</div>
+      <h1>Van boom<br>naar <em>buurman</em></h1>
+      <p class="hero-sub">Elk jaar plukken we samen appels in Zweeloo en Aalden, maken er moes en jam van — en de opbrengst gaat naar een lokaal goed doel.</p>
+      <div class="hero-actions">
+        <a href="#aanmelden" class="btn-primary">Aanmelden als vrijwilliger</a>
+        <a href="#agenda" class="btn-ghost">Bekijk de agenda {{ site.data.algemeen.seizoen }}</a>
+      </div>
     </div>
   </div>
 </section>
