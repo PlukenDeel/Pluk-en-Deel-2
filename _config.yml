@@ -1,15 +1,186 @@
-title: "Pluk & Deel"
-description: "Vrijwilligersproject in Zweeloo en Aalden: appels plukken, jam maken en de opbrengst doneren aan een lokaal goed doel."
-url: ""
-baseurl: ""
-lang: nl
+backend:
+  name: github
+  repo: plukendeel/Pluk-en-Deel-2
+  branch: main
+  base_url: https://JOUW-WORKER.workers.dev
+  # ↑ Vervang dit door jouw Cloudflare Worker URL na stap 1 in de handleiding
 
-# Netlify CMS
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
+# Mediabestanden (foto's) worden hier opgeslagen
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
-plugins:
-  - jekyll-relative-links
+# Taal-instellingen voor de interface
+locale: nl
+
+collections:
+
+  # ─── ALGEMENE INSTELLINGEN ───────────────────────────────────────
+  - name: "algemeen"
+    label: "⚙️ Algemene instellingen"
+    files:
+      - name: "algemeen"
+        label: "Seizoen & goed doel"
+        file: "_data/algemeen.yml"
+        fields:
+          - label: "Seizoen (jaar)"
+            name: "seizoen"
+            widget: "string"
+            hint: "Bijv. 2026"
+
+          - label: "Goed doel (naam)"
+            name: "goed_doel"
+            widget: "string"
+            hint: "Bijv. Oranjevereniging"
+
+          - label: "Goed doel (toelichting)"
+            name: "goed_doel_uitleg"
+            widget: "text"
+            hint: "Korte beschrijving waarvoor de opbrengst wordt gebruikt"
+
+          - label: "Aantal vrijwilligers"
+            name: "aantal_vrijwilligers"
+            widget: "number"
+            value_type: "int"
+
+          - label: "Link aanmeldformulier"
+            name: "aanmeld_url"
+            widget: "string"
+            hint: "Volledige URL, bijv. https://www.plukendeel.nl/aanmelden/"
+
+          - label: "Impact cijfers"
+            name: "impact"
+            widget: "object"
+            collapsed: false
+            hint: "Deze getallen verschijnen als oplopende tellers op de site"
+            fields:
+              - { label: "Kilo appels geoogst (totaal)", name: "kilo_appels", widget: "number", value_type: "int" }
+              - { label: "Potjes moes & jam gemaakt (totaal)", name: "potjes", widget: "number", value_type: "int" }
+              - { label: "Vrijwilligersuren ingezet (totaal)", name: "vrijwilligersuren", widget: "number", value_type: "int" }
+              - { label: "Goede doelen ondersteund (totaal)", name: "goede_doelen", widget: "number", value_type: "int" }
+
+  # ─── AGENDA ──────────────────────────────────────────────────────
+  - name: "agenda"
+    label: "📅 Agenda"
+    files:
+      - name: "agenda"
+        label: "Agenda-activiteiten"
+        file: "_data/agenda.yml"
+        fields:
+          - label: "Activiteiten"
+            name: "items"
+            widget: "list"
+            label_singular: "Activiteit"
+            fields:
+              - label: "Titel"
+                name: "titel"
+                widget: "string"
+                hint: "Bijv. Plukdag"
+
+              - label: "Emoji"
+                name: "emoji"
+                widget: "string"
+                hint: "Één emoji die de activiteit weergeeft, bijv. 🧺"
+
+              - label: "Kleur van de kaart"
+                name: "kleur"
+                widget: "select"
+                options:
+                  - { label: "Rood", value: "rood" }
+                  - { label: "Groen", value: "groen" }
+                  - { label: "Geel", value: "geel" }
+
+              - label: "Datums"
+                name: "datums"
+                widget: "list"
+                label_singular: "Datum"
+                hint: "Voeg één of meer datums toe voor deze activiteit"
+                fields:
+                  - label: "Datum (leesbaar)"
+                    name: "datum"
+                    widget: "string"
+                    hint: "Bijv. Zaterdag 19 september 2026"
+
+                  - label: "Datum (ISO, voor automatisch 'al geweest')"
+                    name: "iso"
+                    widget: "datetime"
+                    format: "YYYY-MM-DD"
+                    date_format: "DD-MM-YYYY"
+                    time_format: false
+                    hint: "Kies de datum in de kalender — dit bepaalt wanneer de kaart automatisch lichter kleurt"
+
+                  - label: "Details"
+                    name: "detail"
+                    widget: "text"
+                    hint: "Locatie, tijdstip en eventuele extra informatie"
+
+              - label: "Tip (optioneel)"
+                name: "tip"
+                widget: "string"
+                required: false
+                hint: "Kleine extra noot onderaan de kaart, bijv. 🍎 Wie meeplukt mag een emmer appels mee!"
+
+  # ─── WERKGROEP ───────────────────────────────────────────────────
+  - name: "werkgroep"
+    label: "👥 Werkgroep"
+    files:
+      - name: "werkgroep"
+        label: "Werkgroepleden"
+        file: "_data/werkgroep.yml"
+        fields:
+          - label: "Leden"
+            name: "leden"
+            widget: "list"
+            field:
+              label: "Naam"
+              name: "naam"
+              widget: "string"
+            hint: "Voeg namen toe of verwijder ze. Volgorde bepaalt de weergave op de site."
+
+  # ─── FOTO'S ──────────────────────────────────────────────────────
+  - name: "fotos"
+    label: "📷 Foto's"
+    files:
+      - name: "tijdlijn"
+        label: "Tijdlijn foto's & teksten"
+        file: "_data/tijdlijn.yml"
+        fields:
+          - label: "Stappen"
+            name: "stappen"
+            widget: "list"
+            label_singular: "Stap"
+            fields:
+              - label: "Stapnummer"
+                name: "stap"
+                widget: "number"
+                value_type: "int"
+
+              - label: "Maand"
+                name: "maand"
+                widget: "string"
+                hint: "Bijv. September"
+
+              - label: "Titel"
+                name: "titel"
+                widget: "string"
+
+              - label: "Omschrijving"
+                name: "omschrijving"
+                widget: "text"
+
+              - label: "Emoji (fallback als foto ontbreekt)"
+                name: "emoji"
+                widget: "string"
+
+              - label: "Foto"
+                name: "foto"
+                widget: "image"
+                hint: "Upload een foto (aanbevolen: 800×600 px)"
+                required: false
+                media_library:
+                  config:
+                    multiple: false
+
+              - label: "Alt-tekst foto"
+                name: "foto_alt"
+                widget: "string"
+                hint: "Beschrijf wat er op de foto staat (belangrijk voor toegankelijkheid)"
