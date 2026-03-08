@@ -1,0 +1,15 @@
+title: "Pluk & Deel"
+description: "Vrijwilligersproject in Zweeloo en Aalden: appels plukken, jam maken en de opbrengst doneren aan een lokaal goed doel."
+url: "https://plukendeel.github.io"
+baseurl: "/Pluk-en-Deel-2"
+lang: nl
+
+# Netlify CMS
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+plugins:
+  - jekyll-relative-links
