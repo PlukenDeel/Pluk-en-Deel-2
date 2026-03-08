@@ -1,11 +1,10 @@
-seizoen: "2026"
-goed_doel: "Oranjevereniging"
-goed_doel_uitleg: "Voor de aanschaf van duurzame materialen die meerjarig gebruikt kunnen worden."
+seizoen: '2026'
+goed_doel: Oranjevereniging
+goed_doel_uitleg: Voor de aanschaf van duurzame materialen die meerjarig gebruikt kunnen worden.
 aantal_vrijwilligers: 8
-aanmeld_url: "https://www.plukendeel.nl/aanmelden/"
-
+aanmeld_url: https://www.plukendeel.nl/aanmelden/
 impact:
   kilo_appels: 4800
   potjes: 1240
   vrijwilligersuren: 320
-  goede_doelen: 10
+  goede_doelen: 7
