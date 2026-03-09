@@ -287,8 +287,8 @@ ul.namen-grid { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem;
 .form-stap input:focus, .form-stap select:focus, .form-stap textarea:focus { border-color: var(--rood); outline: none; }
 .form-stap textarea { min-height: 90px; resize: vertical; }
 .skill-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; margin-top: .5rem; }
-.skill-optie { display: flex; align-items: center; gap: .5rem; cursor: pointer; }
-.skill-optie input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--rood); flex-shrink: 0; }
+.skill-optie { display: flex; align-items: center; gap: .5rem; cursor: pointer; position: relative; z-index: 1; }
+.skill-optie input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--rood); flex-shrink: 0; cursor: pointer; }
 .skill-optie span { font-size: .88rem; color: var(--tekst-zacht); }
 .form-verzenden { width: 100%; padding: .9rem; border: none; border-radius: 100px; background: var(--rood); color: #fff; font-family: 'Lora', Georgia, serif; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background var(--overgang), transform var(--overgang); margin-top: .5rem; }
 .form-verzenden:hover { background: var(--rood-hover); transform: translateY(-1px); }
