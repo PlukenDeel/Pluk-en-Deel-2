@@ -63,6 +63,28 @@ layout: default
   </div>
 </section>
 
+{% if site.data.nieuws.items.size > 0 %}
+<!-- NIEUWS -->
+<section class="nieuws fade-in" id="nieuws" aria-labelledby="nieuws-titel">
+  <div class="container">
+    <p class="section-label" aria-hidden="true">Het laatste nieuws</p>
+    <h2 class="section-title" id="nieuws-titel">Nieuws</h2>
+    <div class="nieuws-grid">
+      {% for bericht in site.data.nieuws.items %}
+      <article class="nieuws-kaart">
+        {% if bericht.foto %}
+        <img class="nieuws-foto" src="{{ bericht.foto | prepend: site.baseurl }}" alt="{{ bericht.foto_alt }}" loading="lazy">
+        {% endif %}
+        <div class="nieuws-datum">{{ bericht.datum }}</div>
+        <h3>{{ bericht.titel }}</h3>
+        <p>{{ bericht.tekst }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <!-- AGENDA -->
 <section class="agenda fade-in" id="agenda" aria-labelledby="agenda-titel">
   <div class="container">
@@ -93,28 +115,6 @@ layout: default
     </div>
   </div>
 </section>
-
-{% if site.data.nieuws.items.size > 0 %}
-<!-- NIEUWS -->
-<section class="nieuws fade-in" id="nieuws" aria-labelledby="nieuws-titel">
-  <div class="container">
-    <p class="section-label" aria-hidden="true">Het laatste nieuws</p>
-    <h2 class="section-title" id="nieuws-titel">Nieuws</h2>
-    <div class="nieuws-grid">
-      {% for bericht in site.data.nieuws.items %}
-      <article class="nieuws-kaart">
-        {% if bericht.foto %}
-        <img class="nieuws-foto" src="{{ bericht.foto | prepend: site.baseurl }}" alt="{{ bericht.foto_alt }}" loading="lazy">
-        {% endif %}
-        <div class="nieuws-datum">{{ bericht.datum }}</div>
-        <h3>{{ bericht.titel }}</h3>
-        <p>{{ bericht.tekst }}</p>
-      </article>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-{% endif %}
 
 {% if site.data.fotos.items.size > 0 %}
 <!-- FOTOGALERIJ -->
