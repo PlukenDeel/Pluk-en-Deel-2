@@ -135,7 +135,7 @@ section { padding: 5rem 2rem; }
 
 /* ─── AGENDA ─── */
 .agenda { background: var(--creme-donker); }
-.agenda-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+.agenda-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
 
 .agenda-kaart {
   background: #fff; border-radius: 20px; padding: 2rem;
@@ -353,6 +353,9 @@ address { font-style: normal; }
   .hero-content { text-align: center; }
   .hero-actions { justify-content: center; }
   .over-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .agenda-grid { grid-template-columns: 1fr; }
+  .micro-grid { grid-template-columns: 1fr; }
+  .impact-grid { grid-template-columns: repeat(2, 1fr); }
   .aanmeld-wrap { grid-template-columns: 1fr; gap: 2rem; }
   .skill-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
