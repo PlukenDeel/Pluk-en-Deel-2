@@ -309,8 +309,8 @@ ul.namen-grid { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem;
 .form-stap textarea { width: 100%; padding: .75rem 1rem; border: 2px solid var(--creme-donker); border-radius: 10px; font-family: 'Lora', Georgia, serif; font-size: .95rem; color: var(--tekst); background: var(--creme); transition: border-color var(--overgang); appearance: none; }
 .form-stap input:focus, .form-stap select:focus, .form-stap textarea:focus { border-color: var(--rood); outline: none; }
 .form-stap textarea { min-height: 90px; resize: vertical; }
-.skill-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; margin-top: .5rem; }
-.skill-optie { display: flex; align-items: center; gap: .5rem; cursor: pointer; position: relative; z-index: 1; }
+.skill-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem 1rem; margin-top: .5rem; }
+.skill-optie { display: flex; align-items: flex-start; gap: .6rem; cursor: pointer; position: relative; z-index: 1; line-height: 1.35; }
 .skill-optie input[type="checkbox"] {
   width: 20px; height: 20px;
   flex-shrink: 0; cursor: pointer;
@@ -320,6 +320,7 @@ ul.namen-grid { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem;
   background: var(--creme);
   transition: background var(--overgang), border-color var(--overgang);
   position: relative;
+  margin-top: .1rem;
 }
 .skill-optie input[type="checkbox"]:checked {
   background: var(--rood);
