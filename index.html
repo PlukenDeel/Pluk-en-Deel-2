@@ -116,6 +116,24 @@ layout: default
 </section>
 {% endif %}
 
+{% if site.data.fotos.items.size > 0 %}
+<!-- FOTOGALERIJ -->
+<section class="galerij fade-in" id="fotos" aria-labelledby="galerij-titel">
+  <div class="container">
+    <p class="section-label" aria-hidden="true">Sfeerbeelden</p>
+    <h2 class="section-title" id="galerij-titel">Foto's</h2>
+    <div class="galerij-grid">
+      {% for foto in site.data.fotos.items %}
+      <figure class="galerij-item">
+        <img src="{{ foto.foto | prepend: site.baseurl }}" alt="{{ foto.foto_alt }}" loading="lazy">
+        {% if foto.bijschrift %}<figcaption>{{ foto.bijschrift }}</figcaption>{% endif %}
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <!-- MICRO-VOLUNTEERING -->
 <section class="micro fade-in" aria-labelledby="micro-titel">
   <div class="container">

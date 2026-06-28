@@ -177,6 +177,12 @@ section { padding: 5rem 2rem; }
 
 /* ─── MICRO-VOLUNTEERING ─── */
 .micro { background: var(--creme); }
+.galerij-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 3rem; }
+.galerij-item { margin: 0; border-radius: 16px; overflow: hidden; position: relative; }
+.galerij-item img { width: 100%; height: 220px; object-fit: cover; display: block; transition: transform var(--overgang); }
+.galerij-item:hover img { transform: scale(1.05); }
+.galerij-item figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: .6rem 1rem; font-size: .8rem; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,.65)); }
+
 .nieuws-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
 .nieuws-kaart { border-radius: 20px; overflow: hidden; border: 2px solid var(--creme-donker); background: #fff; transition: transform var(--overgang), box-shadow var(--overgang), border-color var(--overgang); }
 .nieuws-kaart:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.08); border-color: var(--rood); }
@@ -366,6 +372,7 @@ address { font-style: normal; }
   .over-grid { grid-template-columns: 1fr; gap: 2rem; }
   .agenda-grid { grid-template-columns: 1fr; }
   .nieuws-grid { grid-template-columns: 1fr; }
+  .galerij-grid { grid-template-columns: 1fr; }
   .micro-grid { grid-template-columns: 1fr; }
   .impact-grid { grid-template-columns: repeat(2, 1fr); }
   .aanmeld-wrap { grid-template-columns: 1fr; gap: 2rem; }

@@ -158,6 +158,37 @@ collections:
                 widget: "string"
                 required: false
 
+  # ─── FOTOGALERIJ ─────────────────────────────────────────────────
+  - name: "fotogalerij"
+    label: "🖼️ Fotogalerij"
+    files:
+      - name: "fotos"
+        label: "Losse foto's"
+        file: "_data/fotos.yml"
+        fields:
+          - label: "Foto's"
+            name: "items"
+            widget: "list"
+            label_singular: "Foto"
+            hint: "Voeg hier losse sfeerfoto's toe, los van de tijdlijnstappen"
+            fields:
+              - label: "Foto"
+                name: "foto"
+                widget: "image"
+                media_library:
+                  config:
+                    multiple: false
+
+              - label: "Alt-tekst foto"
+                name: "foto_alt"
+                widget: "string"
+                hint: "Beschrijf wat er op de foto staat (belangrijk voor toegankelijkheid)"
+
+              - label: "Bijschrift (optioneel)"
+                name: "bijschrift"
+                widget: "string"
+                required: false
+
   # ─── WERKGROEP ───────────────────────────────────────────────────
   - name: "werkgroep"
     label: "👥 Werkgroep"
