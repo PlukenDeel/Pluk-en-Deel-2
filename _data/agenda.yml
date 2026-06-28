@@ -1,1 +1,33 @@
-items: []
+items:
+  - titel: Plukdag
+    emoji: 🧺
+    kleur: rood
+    datums:
+      - datum: Datum volgt
+        iso: ''
+        detail: Wordt binnenkort bekendgemaakt.
+    tip: 🍎 Wie meeplukt, mag een emmer appels mee naar huis nemen!
+  - titel: Zelf geplukt inleveren
+    emoji: 🏡
+    kleur: groen
+    datums:
+      - datum: Datum volgt
+        iso: ''
+        detail: Wordt binnenkort bekendgemaakt.
+    tip: Zorg ervoor dat de potten schoon zijn, met metalen deksel en geen etiketten!
+  - titel: Schil- & moesmomenten
+    emoji: 🔪
+    kleur: rood
+    datums:
+      - datum: Datum volgt
+        iso: ''
+        detail: Wordt binnenkort bekendgemaakt.
+    tip: Neem een eigen favoriete schilmesje mee!
+  - titel: Verkopen
+    emoji: 🛒
+    kleur: geel
+    datums:
+      - datum: Datum volgt
+        iso: ''
+        detail: Wordt binnenkort bekendgemaakt.
+    tip: ''

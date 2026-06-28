@@ -155,12 +155,10 @@ layout: default
   <div class="tijdlijn-scroll" role="list" aria-label="Tijdlijn van het plukproces">
     {% for stap in site.data.tijdlijn.stappen %}
     <div class="tijdlijn-kaart" role="listitem">
-      <div class="tijdlijn-foto-placeholder" aria-hidden="true">{{ stap.emoji }}</div>
       <img class="tijdlijn-foto"
            src="{{ stap.foto | prepend: site.baseurl }}"
            alt="{{ stap.foto_alt }}"
-           loading="lazy"
-           onerror="this.style.display='none';this.previousElementSibling.style.display='flex'">
+           loading="lazy">
       <div class="tijdlijn-body">
         <div class="tijdlijn-stap-nr" aria-label="Stap {{ stap.stap }}">{{ stap.stap }}</div>
         <div class="tijdlijn-maand">{{ stap.maand }}</div>
