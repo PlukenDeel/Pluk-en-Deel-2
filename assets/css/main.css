@@ -201,7 +201,12 @@ section { padding: 5rem 2rem; }
 .micro-badge.snel    { background: #e8f5e9; color: #2d6a2d; }
 .micro-badge.middag  { background: #fff3e0; color: #c07a10; }
 .micro-badge.seizoen { background: #fdecea; color: var(--rood); }
-.micro-badge.boom    { background: #e6f0e9; color: #2d5a3d; }
+.micro-badge.boom    { background: #2d5a3d; color: #fff; }
+.micro-kaart.boom-kaart { background: #eef5ee; border-color: #2d5a3d; }
+.micro-kaart.boom-kaart:hover { border-color: #2d5a3d; }
+.micro-kaart.boom-kaart .micro-cta { background: #2d5a3d; }
+.micro-kaart.boom-kaart .micro-cta:hover { background: #234630; }
+.micro-kaart.boom-kaart .micro-taken li::before { color: #2d5a3d; }
 .micro-kaart h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.2rem; margin-bottom: .6rem; }
 .micro-kaart p { font-size: .92rem; color: var(--tekst-zacht); line-height: 1.6; margin-bottom: 1.2rem; }
 .micro-taken { list-style: none; display: flex; flex-direction: column; gap: .4rem; }
