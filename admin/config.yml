@@ -118,6 +118,46 @@ collections:
                 required: false
                 hint: "Kleine extra noot onderaan de kaart, bijv. 🍎 Wie meeplukt mag een emmer appels mee!"
 
+  # ─── NIEUWS ──────────────────────────────────────────────────────
+  - name: "nieuws"
+    label: "📰 Nieuws"
+    files:
+      - name: "nieuws"
+        label: "Nieuwsberichten"
+        file: "_data/nieuws.yml"
+        fields:
+          - label: "Berichten"
+            name: "items"
+            widget: "list"
+            label_singular: "Bericht"
+            hint: "Het meest recente bericht zet je boven aan de lijst"
+            fields:
+              - label: "Titel"
+                name: "titel"
+                widget: "string"
+
+              - label: "Datum"
+                name: "datum"
+                widget: "string"
+                hint: "Bijv. 14 augustus 2026"
+
+              - label: "Tekst"
+                name: "tekst"
+                widget: "text"
+
+              - label: "Foto (optioneel)"
+                name: "foto"
+                widget: "image"
+                required: false
+                media_library:
+                  config:
+                    multiple: false
+
+              - label: "Alt-tekst foto"
+                name: "foto_alt"
+                widget: "string"
+                required: false
+
   # ─── WERKGROEP ───────────────────────────────────────────────────
   - name: "werkgroep"
     label: "👥 Werkgroep"
@@ -165,10 +205,6 @@ collections:
               - label: "Omschrijving"
                 name: "omschrijving"
                 widget: "text"
-
-              - label: "Emoji (fallback als foto ontbreekt)"
-                name: "emoji"
-                widget: "string"
 
               - label: "Foto"
                 name: "foto"
