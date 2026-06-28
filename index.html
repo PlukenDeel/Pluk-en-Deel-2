@@ -134,8 +134,34 @@ layout: default
 </section>
 {% endif %}
 
+<!-- FOTO TIJDLIJN -->
+<section class="tijdlijn fade-in" id="tijdlijn" aria-labelledby="tijdlijn-titel">
+  <div class="container-titel">
+    <p class="section-label" aria-hidden="true">Van boom tot goed doel</p>
+    <h2 class="section-title" id="tijdlijn-titel">Het <em>verhaal</em> in stappen</h2>
+    <p class="tijdlijn-intro">Zo gaat een appel van de boom bij jou in de tuin naar een potje moes op de plank — en de opbrengst naar de buurt.</p>
+  </div>
+  <div class="tijdlijn-scroll" role="list" aria-label="Tijdlijn van het plukproces">
+    {% for stap in site.data.tijdlijn.stappen %}
+    <div class="tijdlijn-kaart" role="listitem">
+      <img class="tijdlijn-foto"
+           src="{{ stap.foto | prepend: site.baseurl }}"
+           alt="{{ stap.foto_alt }}"
+           loading="lazy">
+      <div class="tijdlijn-body">
+        <div class="tijdlijn-stap-nr" aria-label="Stap {{ stap.stap }}">{{ stap.stap }}</div>
+        <div class="tijdlijn-maand">{{ stap.maand }}</div>
+        <h3>{{ stap.titel }}</h3>
+        <p>{{ stap.omschrijving }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <p class="tijdlijn-hint" aria-hidden="true">← Scroll om het hele proces te zien →</p>
+</section>
+
 <!-- MICRO-VOLUNTEERING -->
-<section class="micro fade-in" aria-labelledby="micro-titel">
+<section class="micro fade-in" id="meedoen" aria-labelledby="micro-titel">
   <div class="container">
     <p class="section-label" aria-hidden="true">Hoeveel tijd heb je?</p>
     <h2 class="section-title" id="micro-titel">Elke bijdrage <em>telt</em></h2>
@@ -183,32 +209,6 @@ layout: default
 
     </div>
   </div>
-</section>
-
-<!-- FOTO TIJDLIJN -->
-<section class="tijdlijn fade-in" id="tijdlijn" aria-labelledby="tijdlijn-titel">
-  <div class="container-titel">
-    <p class="section-label" aria-hidden="true">Van boom tot goed doel</p>
-    <h2 class="section-title" id="tijdlijn-titel">Het <em>verhaal</em> in stappen</h2>
-    <p class="tijdlijn-intro">Zo gaat een appel van de boom bij jou in de tuin naar een potje moes op de plank — en de opbrengst naar de buurt.</p>
-  </div>
-  <div class="tijdlijn-scroll" role="list" aria-label="Tijdlijn van het plukproces">
-    {% for stap in site.data.tijdlijn.stappen %}
-    <div class="tijdlijn-kaart" role="listitem">
-      <img class="tijdlijn-foto"
-           src="{{ stap.foto | prepend: site.baseurl }}"
-           alt="{{ stap.foto_alt }}"
-           loading="lazy">
-      <div class="tijdlijn-body">
-        <div class="tijdlijn-stap-nr" aria-label="Stap {{ stap.stap }}">{{ stap.stap }}</div>
-        <div class="tijdlijn-maand">{{ stap.maand }}</div>
-        <h3>{{ stap.titel }}</h3>
-        <p>{{ stap.omschrijving }}</p>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-  <p class="tijdlijn-hint" aria-hidden="true">← Scroll om het hele proces te zien →</p>
 </section>
 
 <!-- WERKGROEP -->
@@ -294,6 +294,8 @@ layout: default
               <label>Wat kun jij meebrengen?</label>
               <div class="skill-grid" role="group" aria-label="Selecteer je vaardigheden">
                 <label class="skill-optie"><input type="checkbox" name="skill[]" value="🍎 Appels plukken"> <span>🍎 Appels plukken</span></label>
+                <label class="skill-optie"><input type="checkbox" name="skill[]" value="🌳 Ik heb een boom (of meerdere) die geplukt mag worden"> <span>🌳 Ik heb een boom die geplukt mag worden</span></label>
+                <label class="skill-optie"><input type="checkbox" name="skill[]" value="🧺 Ik kan zelf appels plukken en bij jullie brengen"> <span>🧺 Ik kan zelf plukken en brengen</span></label>
                 <label class="skill-optie"><input type="checkbox" name="skill[]" value="🔪 Schillen & koken"> <span>🔪 Schillen &amp; koken</span></label>
                 <label class="skill-optie"><input type="checkbox" name="skill[]" value="🛒 Verkopen"> <span>🛒 Verkopen</span></label>
                 <label class="skill-optie"><input type="checkbox" name="skill[]" value="🚗 Rijden / vervoer"> <span>🚗 Rijden / vervoer</span></label>
