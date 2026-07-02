@@ -1,8 +1,14 @@
 title: "Pluk & Deel"
-description: "Vrijwilligersproject in Zweeloo en Aalden: appels plukken, jam maken en de opbrengst doneren aan een lokaal goed doel."
+description: "Appels plukken in Zweeloo en Aalden (Drenthe). Zelf jam maken, samen helpen, opbrengst naar lokale doelen."
 url: "https://plukendeel.github.io"
 baseurl: "/Pluk-en-Deel-2"
 lang: nl
+
+# Social & Contact
+facebook: "https://www.facebook.com/share/1JrC9K9QGv"
+email: "plukendeel@gmail.com"
+phone: "+31645288841"
+address: "Zweeloo en Aalden, Drenthe, Nederland"
 # Netlify CMS
 exclude:
   - Gemfile
