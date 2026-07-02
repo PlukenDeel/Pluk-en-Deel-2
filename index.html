@@ -275,7 +275,7 @@ layout: default
         <h2 class="section-title" id="aanmeld-titel">Meld je <br><em>aan</em></h2>
         <p>Vertel ons wat je kunt en wilt doen. We nemen contact op met meer info.</p>
         <p>Heb je een appelboom? Vul het adres in bij de opmerkingen.</p>
-        <p>Vragen? Mail <strong>plukendeel@gmail.com</strong>.</p>
+        <p>Vragen? Mail <a href="mailto:{{ site.data.algemeen.email }}"><strong>{{ site.data.algemeen.email }}</strong></a>.</p>
       </div>
       <div class="aanmeld-form">
         <h3>Meld je aan voor {{ site.data.algemeen.seizoen }}</h3>
@@ -304,13 +304,13 @@ layout: default
             <div class="form-stap">
               <label>Wat kun jij meebrengen?</label>
               <div class="skill-grid" role="group" aria-label="Selecteer je vaardigheden">
-                <label class="skill-optie"><input type="checkbox" name="skill[]" value="🍎 Appels plukken"> <span>🍎 Appels plukken</span></label>
-                <label class="skill-optie"><input type="checkbox" name="skill[]" value="🌳 Ik heb een boom (of meerdere) die geplukt mag worden"> <span>🌳 Ik heb een boom</span></label>
-                <label class="skill-optie"><input type="checkbox" name="skill[]" value="🧺 Ik kan zelf appels plukken en bij jullie brengen"> <span>🧺 Zelf plukken</span></label>
-                <label class="skill-optie"><input type="checkbox" name="skill[]" value="🔪 Schillen & koken"> <span>🔪 Schillen &amp; koken</span></label>
-                <label class="skill-optie"><input type="checkbox" name="skill[]" value="🛒 Verkopen"> <span>🛒 Verkopen</span></label>
-                <label class="skill-optie"><input type="checkbox" name="skill[]" value="🚗 Rijden / vervoer"> <span>🚗 Rijden / vervoer</span></label>
-                <label class="skill-optie"><input type="checkbox" name="skill[]" value="✨ Iets anders"> <span>✨ Iets anders</span></label>
+                <label class="skill-optie"><input type="checkbox" name="skill[]" value="appels_plukken"> <span>🍎 Appels plukken</span></label>
+                <label class="skill-optie"><input type="checkbox" name="skill[]" value="boom_beschikbaar"> <span>🌳 Ik heb een boom</span></label>
+                <label class="skill-optie"><input type="checkbox" name="skill[]" value="zelf_plukken"> <span>🧺 Zelf plukken</span></label>
+                <label class="skill-optie"><input type="checkbox" name="skill[]" value="schillen_koken"> <span>🔪 Schillen &amp; koken</span></label>
+                <label class="skill-optie"><input type="checkbox" name="skill[]" value="verkopen"> <span>🛒 Verkopen</span></label>
+                <label class="skill-optie"><input type="checkbox" name="skill[]" value="vervoer"> <span>🚗 Rijden / vervoer</span></label>
+                <label class="skill-optie"><input type="checkbox" name="skill[]" value="anders"> <span>✨ Iets anders</span></label>
               </div>
             </div>
             <div class="form-stap">
@@ -341,6 +341,17 @@ layout: default
 </section>
 
 <script>
+// Formulier error-melding
+const showFormError = (msg) => {
+  const errorDiv = document.createElement('div');
+  errorDiv.className = 'form-error';
+  errorDiv.setAttribute('role', 'alert');
+  errorDiv.textContent = msg;
+  const form = document.getElementById('aanmeldForm');
+  form.insertAdjacentElement('beforebegin', errorDiv);
+  setTimeout(() => errorDiv.remove(), 5000);
+};
+
 // Formspree AJAX submit — toont succesmelding zonder pagina-refresh
 const form = document.getElementById('aanmeldForm');
 if (form) {
@@ -359,11 +370,14 @@ if (form) {
         succes.style.display = 'block';
         succes.focus();
       } else {
-        alert('Er ging iets mis. Probeer het opnieuw of stuur een e-mail naar plukendeel@gmail.com');
+        showFormError('Er ging iets mis. Probeer het opnieuw of stuur een e-mail naar {{ site.data.algemeen.email }}');
       }
     } catch {
-      alert('Er ging iets mis. Controleer je internetverbinding.');
+      showFormError('Fout bij verzenden. Controleer je internetverbinding.');
     }
   });
 }
 </script>
+
+<!-- GoatCounter privacy-friendly analytics -->
+<script data-goatcounter="https://plukjes.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>

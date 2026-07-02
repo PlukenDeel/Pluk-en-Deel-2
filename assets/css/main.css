@@ -366,6 +366,16 @@ address { font-style: normal; }
 .fade-in { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
+/* ─── FORM FEEDBACK ─── */
+.form-error {
+  background: #d32f2f; color: #fff; padding: 1rem 1.5rem; border-radius: 6px;
+  margin-bottom: 1.5rem; font-size: .95rem; animation: slideDown .3s ease;
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
   .nav-links { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--creme); flex-direction: column; padding: 1.5rem 2rem; gap: 1.2rem; border-bottom: 2px solid var(--creme-donker); box-shadow: 0 8px 24px rgba(0,0,0,.08); }

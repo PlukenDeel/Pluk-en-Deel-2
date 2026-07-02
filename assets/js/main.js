@@ -1,25 +1,32 @@
+// ─── Service worker registratie ───
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/Pluk-en-Deel-2/assets/js/sw.js').catch(() => {});
+}
+
 // ─── Hamburger menu ───
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('navLinks');
 
-function sluitMenu() {
-  navLinks.classList.remove('open');
-  hamburger.setAttribute('aria-expanded', 'false');
-  hamburger.setAttribute('aria-label', 'Navigatiemenu openen');
-}
+if (hamburger && navLinks) {
+  const sluitMenu = () => {
+    navLinks.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Navigatiemenu openen');
+  };
 
-hamburger.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('open');
-  hamburger.setAttribute('aria-expanded', String(isOpen));
-  hamburger.setAttribute('aria-label', isOpen ? 'Navigatiemenu sluiten' : 'Navigatiemenu openen');
-});
-navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', sluitMenu));
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && navLinks.classList.contains('open')) { sluitMenu(); hamburger.focus(); }
-});
-navLinks.addEventListener('focusout', e => {
-  if (!navLinks.contains(e.relatedTarget)) sluitMenu();
-});
+  hamburger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    hamburger.setAttribute('aria-label', isOpen ? 'Navigatiemenu sluiten' : 'Navigatiemenu openen');
+  });
+  navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', sluitMenu));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && navLinks.classList.contains('open')) { sluitMenu(); hamburger.focus(); }
+  });
+  navLinks.addEventListener('focusout', e => {
+    if (!navLinks.contains(e.relatedTarget)) sluitMenu();
+  });
+}
 
 // ─── Verlopen agenda-kaarten (client-side check) ───
 // Kaarten hebben data-iso attribuut; we vergelijken met vandaag
@@ -68,18 +75,4 @@ if ('IntersectionObserver' in window) {
   if (impactSectie) impactObserver.observe(impactSectie);
 } else {
   document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
-}
-
-// ─── Aanmeldformulier ───
-function verstuurFormulier() {
-  const naam  = document.getElementById('naam').value.trim();
-  const email = document.getElementById('email').value.trim();
-  if (!naam || !email) {
-    alert('Vul je naam en e-mailadres in om je aan te melden.');
-    return;
-  }
-  document.getElementById('formInhoud').style.display = 'none';
-  const succes = document.getElementById('formSucces');
-  succes.style.display = 'block';
-  succes.focus();
 }
