@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://plukendeel.github.io/Pluk-en-Deel-2/sitemap.xml
