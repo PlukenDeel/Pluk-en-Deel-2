@@ -6,7 +6,7 @@ items:
       - datum: Datum volgt
         iso: ''
         detail: Wordt binnenkort bekendgemaakt.
-    tip: 🍎 Wie meeplukt, mag een emmer appels mee naar huis nemen! Heb je zelf appels geplukt? Neem contact met ons op, dan spreken we af hoe en wanneer je ze kunt brengen.
+    tip: "🍎 Wie meeplukt mag een zak appels mee naar huis nemen. Appels van je eigen boom? Neem contact op en we halen ze op."
   - titel: Potten inzamelen
     emoji: 🏡
     kleur: groen
@@ -14,7 +14,7 @@ items:
       - datum: Datum volgt
         iso: ''
         detail: Wordt binnenkort bekendgemaakt.
-    tip: Zorg ervoor dat de potten schoon zijn, met metalen deksel en geen etiketten!
+    tip: Wij kunnen alleen potten gebruiken die schoon zijn, met metalen deksel en zonder etiketten.
   - titel: Schil- & moesmomenten
     emoji: 🔪
     kleur: rood
