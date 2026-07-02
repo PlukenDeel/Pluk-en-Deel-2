@@ -142,9 +142,13 @@
     }
   }
   document.addEventListener('click', function (e) {
-    var trigger = e.target.closest('.privacy-trigger');
-    if (trigger) { e.preventDefault(); openPrivacyModal(); }
-  });
+  var trigger = e.target.closest('.privacy-trigger');
+  if (trigger) {
+    e.preventDefault();
+    e.stopPropagation();
+    openPrivacyModal();
+  }
+});
   </script>
 
   
