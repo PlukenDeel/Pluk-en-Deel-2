@@ -13,4 +13,4 @@ exclude:
 
 plugins:
   - jekyll-relative-links
- - jekyll-sitemap
+  - jekyll-sitemap
