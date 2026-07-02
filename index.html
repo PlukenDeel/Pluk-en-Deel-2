@@ -317,6 +317,14 @@ layout: default
               <label for="opmerking">Toelichting of vraag</label>
               <textarea id="opmerking" name="opmerking" placeholder="Bijv. ik heb een appelboom in de tuin, of ik kan alleen op zaterdagen..."></textarea>
             </div>
+
+            <div class="form-stap">
+  <label class="skill-optie">
+    <input type="checkbox" name="privacy_akkoord" required>
+    <span>Ik heb de <a href="{{ '/privacy.html' | prepend: site.baseurl }}" class="privacy-trigger">privacyverklaring</a> gelezen. *</span>
+  </label>
+</div>
+            
             <button type="submit" class="form-verzenden">
               Aanmelden →
             </button>
