@@ -46,6 +46,8 @@
   <script data-goatcounter="https://plukjes.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </head>
+
+ 
 <body>
 
   <a href="#main" class="skip-link">Direct naar inhoud</a>
@@ -118,5 +120,33 @@
   </footer>
 
   <script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}"></script>
+
+   <dialog id="privacyModal">
+    <button type="button" class="privacy-modal-close" aria-label="Sluiten" onclick="document.getElementById('privacyModal').close()">×</button>
+    <div id="privacyModalBody"><p style="padding:1.5rem;">Bezig met laden…</p></div>
+  </dialog>
+
+  <script>
+  async function openPrivacyModal() {
+    var dialog = document.getElementById('privacyModal');
+    var body = document.getElementById('privacyModalBody');
+    dialog.showModal();
+    try {
+      var res = await fetch("{{ '/privacy.html' | prepend: site.baseurl }}");
+      var html = await res.text();
+      var doc = new DOMParser().parseFromString(html, 'text/html');
+      var content = doc.getElementById('privacyContent');
+      body.innerHTML = content ? content.innerHTML : '<p style="padding:1.5rem;">Kon niet laden.</p>';
+    } catch (e) {
+      body.innerHTML = '<p style="padding:1.5rem;">Kon niet laden. <a href="{{ '/privacy.html' | prepend: site.baseurl }}" target="_blank">Open in nieuw tabblad</a>.</p>';
+    }
+  }
+  document.addEventListener('click', function (e) {
+    var trigger = e.target.closest('.privacy-trigger');
+    if (trigger) { e.preventDefault(); openPrivacyModal(); }
+  });
+  </script>
+
+  
 </body>
 </html>
