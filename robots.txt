@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://plukendeel.github.io/Pluk-en-Deel-2/sitemap.xml
+Sitemap: https://www.plukendeel.nl/sitemap.xml
