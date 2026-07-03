@@ -17,7 +17,7 @@ layout: default
     </div>
     <div class="hero-content">
       <div class="hero-badge">📍 Zweeloo &amp; Aalden · Drenthe</div>
-      <h1>Appels plukken in Zweeloo &amp; Aalden<br>voor een goed doel</h1>
+      <h1>Appels plukken<br>voor een goed doel</h1>
       <p class="hero-sub">We plukken samen appels in Zweeloo en Aalden, verwerken ze tot moes en jam, en steunen er een lokaal initiatief mee.</p>
       <div class="hero-actions">
         <a href="#aanmelden" class="btn-primary">Aanmelden als vrijwilliger</a>
@@ -27,15 +27,34 @@ layout: default
   </div>
 </section>
 
-<!-- STATS -->
-<div class="stats-strip">
-  <div class="stats-inner">
-    <div><div class="stat-num">{{ site.data.algemeen.impact.kilo_appels }}</div><div class="stat-label">kilo appels geoogst</div></div>
-    <div><div class="stat-num">{{ site.data.algemeen.impact.potjes }}</div><div class="stat-label">potjes jam gemaakt</div></div>
-    <div><div class="stat-num">10</div><div class="stat-label">jaar lang actief</div></div>
-    <div><div class="stat-num">{{ site.data.algemeen.impact.goede_doelen }}</div><div class="stat-label">goede doelen ondersteund</div></div>
+<!-- IMPACT DASHBOARD -->
+<section class="impact fade-in" id="impact" aria-labelledby="impact-titel">
+  <div class="container">
+    <h2 class="section-title" id="impact-titel">Wat we bereikt hebben</h2>
+    <div class="impact-grid">
+      <div class="impact-kaart">
+        <span class="impact-emoji" aria-hidden="true">🍎</span>
+        <span class="impact-getal" data-doel="{{ site.data.algemeen.impact.kilo_appels }}">0</span>
+        <span class="impact-label">kilo appels geoogst</span>
+      </div>
+      <div class="impact-kaart">
+        <span class="impact-emoji" aria-hidden="true">🍯</span>
+        <span class="impact-getal" data-doel="{{ site.data.algemeen.impact.potjes }}">0</span>
+        <span class="impact-label">potjes moes &amp; jam gemaakt</span>
+      </div>
+      <div class="impact-kaart">
+        <span class="impact-emoji" aria-hidden="true">🤝</span>
+        <span class="impact-getal" data-doel="10">0</span>
+        <span class="impact-label">jaar lang actief</span>
+      </div>
+      <div class="impact-kaart">
+        <span class="impact-emoji" aria-hidden="true">🎯</span>
+        <span class="impact-getal" data-doel="{{ site.data.algemeen.impact.goede_doelen }}">0</span>
+        <span class="impact-label">goede doelen ondersteund</span>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 <!-- OVER -->
 <section class="over fade-in" id="over" aria-labelledby="over-titel">
@@ -232,37 +251,6 @@ layout: default
       <li class="naam-chip">{{ lid }}</li>
       {% endfor %}
     </ul>
-  </div>
-</section>
-
-<!-- IMPACT DASHBOARD -->
-<section class="impact fade-in" aria-labelledby="impact-titel">
-  <div class="container">
-    <p class="section-label" aria-hidden="true">Wat we bereikt hebben</p>
-    <h2 class="section-title" id="impact-titel">Dit hebben we <em>gedaan</em></h2>
-    <p class="impact-intro">Tien jaar lang appels plukken en samen een goed doel steunen. Dit is wat we bereikt hebben.</p>
-    <div class="impact-grid">
-      <div class="impact-kaart">
-        <span class="impact-emoji" aria-hidden="true">🍎</span>
-        <span class="impact-getal" data-doel="{{ site.data.algemeen.impact.kilo_appels }}">0</span>
-        <span class="impact-label">kilo appels geoogst</span>
-      </div>
-      <div class="impact-kaart">
-        <span class="impact-emoji" aria-hidden="true">🍯</span>
-        <span class="impact-getal" data-doel="{{ site.data.algemeen.impact.potjes }}">0</span>
-        <span class="impact-label">potjes moes &amp; jam gemaakt</span>
-      </div>
-      <div class="impact-kaart">
-        <span class="impact-emoji" aria-hidden="true">🤝</span>
-        <span class="impact-getal" data-doel="{{ site.data.algemeen.impact.vrijwilligersuren }}">0</span>
-        <span class="impact-label">vrijwilligersuren ingezet</span>
-      </div>
-      <div class="impact-kaart">
-        <span class="impact-emoji" aria-hidden="true">🎯</span>
-        <span class="impact-getal" data-doel="{{ site.data.algemeen.impact.goede_doelen }}">0</span>
-        <span class="impact-label">goede doelen ondersteund</span>
-      </div>
-    </div>
   </div>
 </section>
 
