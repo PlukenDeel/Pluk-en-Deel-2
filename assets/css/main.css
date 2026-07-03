@@ -123,6 +123,9 @@ section { padding: 5rem 2rem; }
 
 /* ─── OVER ─── */
 .over { background: var(--creme); }
+
+/* ─── NIEUWS ─── */
+.nieuws { background: var(--creme-donker); }
 .over-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
 .over-text p { color: var(--tekst-zacht); line-height: 1.8; margin-bottom: 1rem; font-size: 1.05rem; }
 .over-card { background: var(--groen); border-radius: 24px; padding: 2.5rem; color: #fff; position: relative; overflow: hidden; }
@@ -134,7 +137,7 @@ section { padding: 5rem 2rem; }
 .goed-doel-box { margin-top: 1.5rem; background: rgba(255,255,255,.15); border-radius: 12px; padding: 1rem 1.2rem; font-size: .9rem; font-style: italic; line-height: 1.5; }
 
 /* ─── AGENDA ─── */
-.agenda { background: var(--creme-donker); }
+.agenda { background: var(--creme); }
 .agenda-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
 
 .agenda-kaart {
@@ -176,7 +179,7 @@ section { padding: 5rem 2rem; }
 .agenda-tip { margin-top: 1rem; background: var(--creme); border-radius: 8px; padding: .7rem .9rem; font-size: .82rem; font-style: italic; color: var(--tekst-zacht); }
 
 /* ─── MICRO-VOLUNTEERING ─── */
-.micro { background: var(--creme); }
+.micro { background: var(--creme-donker); }
 .galerij-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 3rem; }
 .galerij-item { margin: 0; border-radius: 16px; overflow: hidden; position: relative; }
 .galerij-item img { width: 100%; height: 220px; object-fit: cover; display: block; transition: transform var(--overgang); }
@@ -283,7 +286,7 @@ ul.namen-grid { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem;
 .naam-chip { background: #fff; border: 2px solid var(--creme-donker); border-radius: 100px; padding: .5rem 1.2rem; font-size: .9rem; color: var(--tekst); box-shadow: 0 2px 8px rgba(0,0,0,.05); }
 
 /* ─── IMPACT DASHBOARD ─── */
-.impact { background: var(--tekst); padding: 5rem 2rem; }
+.impact { background: var(--groen); padding: 5rem 2rem; }
 .impact .section-label { color: var(--geel); }
 .impact .section-label::before { background: var(--geel); }
 .impact .section-title { color: #fff; }
@@ -297,7 +300,7 @@ ul.namen-grid { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem;
 .impact-label { font-size: .9rem; color: rgba(255,255,255,.7); margin-top: .4rem; line-height: 1.4; }
 
 /* ─── AANMELDEN ─── */
-.aanmelden-sectie { background: var(--creme-donker); padding: 5rem 2rem; }
+.aanmelden-sectie { background: var(--creme); padding: 5rem 2rem; }
 .aanmeld-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
 .aanmeld-uitleg p { color: var(--tekst-zacht); line-height: 1.8; font-size: 1rem; margin-bottom: 1rem; }
 .aanmeld-form { background: #fff; border-radius: 24px; padding: 2.5rem; box-shadow: 0 4px 30px rgba(0,0,0,.07); }
