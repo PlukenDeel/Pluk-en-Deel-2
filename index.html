@@ -30,7 +30,7 @@ layout: default
 <!-- IMPACT DASHBOARD -->
 <section class="impact fade-in" id="impact" aria-labelledby="impact-titel">
   <div class="container">
-    <p class="section-label" aria-hidden="true">Wat we bereikt hebben</p>
+    <p class="section-label" aria-hidden="true">In tien jaar tijd</p>
     <h2 class="section-title" id="impact-titel">Tien jaar<br><em>oogsten</em></h2>
     <div class="impact-grid">
       <div class="impact-kaart">
@@ -63,10 +63,9 @@ layout: default
     <div class="over-grid">
       <div class="over-text">
         <p class="section-label" aria-hidden="true">Hoe het werkt</p>
-        <h2 class="section-title" id="over-titel">Appels plukken,<br><em>verwerken, steunen</em></h2>
+        <h2 class="section-title" id="over-titel">Van appel<br><em>tot goed doel</em></h2>
         <p>In Zweeloo en Aalden hangen veel appelbomen vol fruit dat niemand plukt. We organiseren plukdagen om die appels op te halen.</p>
         <p>We schillen ze, koken ze tot moes en jam, en verkopen die. De opbrengst gaat naar een lokaal goed doel dat we samen kiezen.</p>
-        <p>Iedereen kan helpen, hoe je ook maar wilt. Je kunt meedoen met plukken, verwerken, verkopen, of gewoon een idee aanleveren voor het goed doel.</p>
       </div>
       <div>
         <div class="over-card">
@@ -110,7 +109,7 @@ layout: default
   <div class="container">
     <p class="section-label" aria-hidden="true">Wanneer</p>
     <h2 class="section-title" id="agenda-titel">Agenda <em>{{ site.data.algemeen.seizoen }}</em></h2>
-    <p style="color:var(--tekst-zacht);max-width:560px;margin-top:.5rem;line-height:1.7;">Zet de data vast in je agenda! Iedereen is welkom.</p>
+    <p style="color:var(--tekst-zacht);max-width:560px;margin-top:.5rem;line-height:1.7;">Exacte data volgen — houd deze pagina in de gaten.</p>
     <div class="agenda-grid">
       {% for kaart in site.data.agenda.items %}
       {% assign laatste_datum = kaart.datums | last %}
@@ -181,61 +180,46 @@ layout: default
   <p class="tijdlijn-hint" aria-hidden="true">← Scroll om het hele proces te zien →</p>
 </section>
 
-<!-- MICRO-VOLUNTEERING -->
+<!-- MEEDOEN -->
 <section class="micro fade-in" id="meedoen" aria-labelledby="micro-titel">
   <div class="container">
-    <p class="section-label" aria-hidden="true">Hoe lang je mee kunt doen</p>
-    <h2 class="section-title" id="micro-titel">Zoek uit wat<br>bij je <em>past</em></h2>
-    <p style="color:var(--tekst-zacht);max-width:560px;margin-top:.5rem;line-height:1.7;">Of je nu één uurtje hebt of het hele seizoen — alles helpt.</p>
+    <p class="section-label" aria-hidden="true">Doe mee</p>
+    <h2 class="section-title" id="micro-titel">We zoeken<br><em>mensen</em></h2>
+    <p style="color:var(--tekst-zacht);max-width:560px;margin-top:.5rem;line-height:1.7;">Ieder jaar draaien we op een handjevol vrijwilligers. Meer handen zijn altijd welkom — je hoeft niks te kunnen, alleen zin te hebben.</p>
     <div class="micro-grid">
 
       <div class="micro-kaart">
-        <span class="micro-badge snel">⏱ 1–2 uur</span>
-        <h3>Even snel helpen</h3>
-        <p>Plukkend, leverend of verkoopend — je kunt gewoon een keer langskomen.</p>
+        <h3>Kom een keer meehelpen</h3>
+        <p>Of het nu plukken is, schillen, koken of verkopen — gewoon een keer langskomen is al prima. We leggen alles uit en er is altijd koffie.</p>
         <ul class="micro-taken">
-          <li>Meeplukken op plukdag</li>
-          <li>Appels brengen naar inzamelpunt</li>
-          <li>Potjes verkopen</li>
+          <li>Meeplukken in september</li>
+          <li>Schillen &amp; koken in oktober</li>
+          <li>Potjes verkopen op de markt</li>
         </ul>
-        <a href="#aanmelden" class="micro-cta">Ik heb een uurtje →</a>
+        <a href="#aanmelden" class="micro-cta">Ik doe mee →</a>
       </div>
 
       <div class="micro-kaart">
-        <span class="micro-badge middag">🕑 Een middag</span>
-        <h3>Een middag verwerken</h3>
-        <p>Schillen, koken, vullen en etiketteren — we doen het samen en er is altijd koffie.</p>
+        <h3>Vaste hand in de werkgroep</h3>
+        <p>We zijn een kleine groep en kunnen er altijd iemand bij hebben. Je helpt mee met plannen en aanwezig zijn op de dag zelf.</p>
         <ul class="micro-taken">
-          <li>Schillen &amp; snijden</li>
-          <li>Appelmoes of jam koken</li>
-          <li>Potjes vullen en labelen</li>
+          <li>Paar keer per jaar vergaderen</li>
+          <li>Contact met boom-eigenaren</li>
+          <li>Aanwezig op plukdag en schilmomenten</li>
         </ul>
-        <a href="#aanmelden" class="micro-cta">Ik kom een middag →</a>
-      </div>
-
-      <div class="micro-kaart">
-        <span class="micro-badge seizoen">📅 Heel het seizoen</span>
-        <h3>Vaste vrijwilliger</h3>
-        <p>Wil je het hele jaar betrokken zijn? Kom in de werkgroep en help met planning en coördinatie.</p>
-        <ul class="micro-taken">
-          <li>Meedenken over planning</li>
-          <li>Contact leggen met boom-eigenaren</li>
-          <li>Coördineren op plukdag</li>
-        </ul>
-        <a href="#aanmelden" class="micro-cta">Ik doe het hele seizoen →</a>
+        <a href="#aanmelden" class="micro-cta">Ik wil meer doen →</a>
       </div>
 
       <div class="micro-kaart boom-kaart">
-<span class="micro-badge boom">🌳 Heb je een boom</span>
-<h3>Boom aanmelden</h3>
-<p>We zijn altijd op zoek naar appelbomen in Zweeloo en Aalden die we mogen plukken. Staat er eentje bij jou in de tuin?</p>
-<ul class="micro-taken">
-<li>Je boom aanmelden</li>
-<li>Adres doorgeven</li>
-<li>Wij nemen contact op om te plukken</li>
-</ul>
-<a href="#aanmelden" class="micro-cta">Ik heb een boom →</a>
-</div>
+        <h3>Ik heb een appelboom</h3>
+        <p>Hangen er ieder jaar appels ongebruikt aan de boom? Meld je aan en we komen plukken. Je hoeft er zelf niets voor te doen.</p>
+        <ul class="micro-taken">
+          <li>Boomadres doorgeven</li>
+          <li>Wij komen plukken</li>
+          <li>Je mag zelf ook appels houden</li>
+        </ul>
+        <a href="#aanmelden" class="micro-cta">Boom aanmelden →</a>
+      </div>
 
     </div>
   </div>
@@ -246,7 +230,7 @@ layout: default
   <div class="container">
     <p class="section-label" aria-hidden="true">De mensen erachter</p>
     <h2 class="section-title" id="werkgroep-titel">Werkgroep <em>{{ site.data.algemeen.seizoen }}</em></h2>
-    <p style="color:var(--tekst-zacht);margin-top:.5rem;line-height:1.7;max-width:500px;">Een geweldige groep vrijwilligers uit Zweeloo en Aalden.</p>
+    <p style="color:var(--tekst-zacht);margin-top:.5rem;line-height:1.7;max-width:500px;">Een stel mensen uit Zweeloo en Aalden die dit al jaren samen doen.</p>
     <ul class="namen-grid" aria-label="Werkgroepleden">
       {% for lid in site.data.werkgroep.leden %}
       <li class="naam-chip">{{ lid }}</li>
@@ -262,8 +246,8 @@ layout: default
       <div class="aanmeld-uitleg">
         <p class="section-label" aria-hidden="true">Doe mee</p>
         <h2 class="section-title" id="aanmeld-titel">Meld je <br><em>aan</em></h2>
-        <p>Vertel ons wat je kunt en wilt doen. We nemen contact op met meer info.</p>
-        <p>Heb je een appelboom? Vul het adres in bij de opmerkingen.</p>
+        <p>Vul je naam en e-mailadres in, vink aan wat je leuk lijkt. We nemen contact op.</p>
+        <p>Heb je een appelboom? Zet het adres in de opmerkingen.</p>
         <p>Vragen? Mail <a href="mailto:{{ site.data.algemeen.email }}"><strong>{{ site.data.algemeen.email }}</strong></a>.</p>
       </div>
       <div class="aanmeld-form">
@@ -322,7 +306,7 @@ layout: default
         <div class="form-succes" id="formSucces" aria-live="polite" style="display:none">
           <span class="succes-icon">🍎</span>
           <h4>Gelukt, bedankt!</h4>
-          <p>We hebben je aanmelding ontvangen en nemen binnenkort contact op. Tot dan — en tot de oogst!</p>
+          <p>We hebben je aanmelding ontvangen en nemen binnenkort contact op.</p>
         </div>
       </div>
     </div>
