@@ -29,7 +29,7 @@ items:
     datums:
       - datum: Herfstvakantie
         iso: '2026-10-10'
-        detail: Zaterdag 10 t/m zondag 18 oktober (herfstvakantie Noord).
+        detail: "10 t/m 25 oktober — Noord: 10–18 okt, Midden & Zuid: 17–25 okt."
       - datum: Rondom Sinterklaas
         iso: '2026-11-28'
         detail: Zaterdag 28 november t/m zondag 6 december (pakjesavond 5 december).
