@@ -3,17 +3,17 @@ items:
     emoji: 🧺
     kleur: rood
     datums:
-      - datum: Datum volgt
-        iso: ''
-        detail: Wordt binnenkort bekendgemaakt.
+      - datum: vrijdag 18 september
+        iso: '2026-09-18'
+        detail: Reservedag is vrijdag 25 september.
     tip: "🍎 Wie meeplukt mag een zak appels mee naar huis nemen. Appels van je eigen boom? Neem contact op en we halen ze op."
   - titel: Potten inzamelen
     emoji: 🏡
     kleur: groen
     datums:
-      - datum: Datum volgt
+      - datum: Vanaf nu
         iso: ''
-        detail: Wordt binnenkort bekendgemaakt.
+        detail: Breng lege potten naar Klooster 2 in Zweeloo — in de kast rechts van de ingang, onderste plank.
     tip: Wij kunnen alleen potten gebruiken die schoon zijn, met metalen deksel en zonder etiketten.
   - titel: Schil- & moesmomenten
     emoji: 🔪
@@ -23,11 +23,17 @@ items:
         iso: ''
         detail: Wordt binnenkort bekendgemaakt.
     tip: Neem een eigen favoriete schilmesje mee!
-  - titel: Verkopen
+  - titel: Verkopen bij de PLUS
     emoji: 🛒
     kleur: geel
     datums:
-      - datum: Datum volgt
-        iso: ''
-        detail: Wordt binnenkort bekendgemaakt.
+      - datum: Herfstvakantie
+        iso: '2026-10-10'
+        detail: Zaterdag 10 t/m zondag 18 oktober (herfstvakantie Noord).
+      - datum: Rondom Sinterklaas
+        iso: '2026-11-28'
+        detail: Zaterdag 28 november t/m zondag 6 december (pakjesavond 5 december).
+      - datum: Kerstvakantie
+        iso: '2026-12-19'
+        detail: Zaterdag 19 december t/m zaterdag 3 januari.
     tip: ''
