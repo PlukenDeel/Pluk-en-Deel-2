@@ -13,7 +13,7 @@ items:
     datums:
       - datum: Vanaf nu
         iso: ''
-        detail: Breng lege potten naar Klooster 2 in Zweeloo — in de kast rechts van de ingang, onderste plank.
+        detail: Breng lege potten naar Klooster 2 in Zweeloo, in de kast rechts van de ingang, onderste plank.
     tip: Wij kunnen alleen potten gebruiken die schoon zijn, met metalen deksel en zonder etiketten.
   - titel: Schil- & moesmomenten
     emoji: 🔪
@@ -29,7 +29,7 @@ items:
     datums:
       - datum: Herfstvakantie
         iso: '2026-10-10'
-        detail: "10 t/m 25 oktober — Noord: 10–18 okt, Midden & Zuid: 17–25 okt."
+        detail: "10 t/m 25 oktober. Noord: 10 t/m 18 okt, Midden en Zuid: 17 t/m 25 okt."
       - datum: Rondom Sinterklaas
         iso: '2026-11-28'
         detail: Zaterdag 28 november t/m zondag 6 december (pakjesavond 5 december).

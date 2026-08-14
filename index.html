@@ -65,7 +65,7 @@ layout: default
         <p class="section-label" aria-hidden="true">Hoe het werkt</p>
         <h2 class="section-title" id="over-titel">Van appel<br><em>tot goed doel</em></h2>
         <p>In Zweeloo en Aalden hangen veel appelbomen vol fruit dat niemand plukt. Wij halen ze op.</p>
-        <p>Daarna koken we bij het Korenhof in Aalden moes en jam. Die verkopen we bij de PLUS. De opbrengst gaat naar een goed doel — elk jaar kiezen we samen welk.</p>
+        <p>Daarna koken we bij het Korenhof in Aalden moes en jam. Die verkopen we bij de PLUS. De opbrengst gaat naar een goed doel. Elk jaar kiezen we samen welk.</p>
       </div>
       <div>
         <div class="over-card">
@@ -75,7 +75,7 @@ layout: default
             <li>Samen jam en moes koken bij het Korenhof</li>
             <li>De opbrengst weggeven aan een goed doel</li>
           </ul>
-          <div class="goed-doel-box">🎯 Dit seizoen steunen we: <strong>{{ site.data.algemeen.goed_doel }}</strong> — {{ site.data.algemeen.goed_doel_uitleg }}</div>
+          <div class="goed-doel-box">🎯 Dit seizoen steunen we: <strong>{{ site.data.algemeen.goed_doel }}</strong>. {{ site.data.algemeen.goed_doel_uitleg }}</div>
         </div>
       </div>
     </div>
@@ -109,7 +109,7 @@ layout: default
   <div class="container">
     <p class="section-label" aria-hidden="true">Wanneer</p>
     <h2 class="section-title" id="agenda-titel">Agenda <em>{{ site.data.algemeen.seizoen }}</em></h2>
-    <p style="color:var(--tekst-zacht);max-width:560px;margin-top:.5rem;line-height:1.7;">Exacte data volgen — houd deze pagina in de gaten.</p>
+    <p style="color:var(--tekst-zacht);max-width:560px;margin-top:.5rem;line-height:1.7;">Exacte data volgen. Houd deze pagina in de gaten.</p>
     <div class="agenda-grid">
       {% for kaart in site.data.agenda.items %}
       {% assign laatste_datum = kaart.datums | last %}
@@ -159,7 +159,7 @@ layout: default
   <div class="container-titel">
     <p class="section-label" aria-hidden="true">Van boom tot goed doel</p>
     <h2 class="section-title" id="tijdlijn-titel">Het seizoen<br><em>in stappen</em></h2>
-    <p class="tijdlijn-intro">Zo gaat een appel van de boom bij jou in de tuin naar een potje moes op de plank — en de opbrengst naar de buurt.</p>
+    <p class="tijdlijn-intro">Zo gaat een appel van de boom bij jou in de tuin naar een potje moes op de plank, en de opbrengst naar de buurt.</p>
   </div>
   <div class="tijdlijn-scroll" role="list" aria-label="Tijdlijn van het plukproces">
     {% for stap in site.data.tijdlijn.stappen %}
