@@ -3,9 +3,9 @@ items:
     emoji: 🧺
     kleur: rood
     datums:
-      - datum: vrijdag 18 september
-        iso: '2026-09-18'
-        detail: Reservedag is vrijdag 25 september.
+      - datum: zaterdag 19 september
+        iso: '2026-09-19'
+        detail: Reservedag is zaterdag 26 september.
     tip: "🍎 Wie meeplukt mag een zak appels mee naar huis nemen. Appels van je eigen boom? Neem contact op en we halen ze op."
   - titel: Potten inzamelen
     emoji: 🏡
