@@ -200,11 +200,10 @@ layout: default
       </div>
 
       <div class="micro-kaart">
-        <h3>Vaste hand in de werkgroep</h3>
-        <p>We zijn een kleine groep en kunnen er altijd iemand bij hebben. Je helpt mee met plannen en aanwezig zijn op de dag zelf.</p>
+        <h3>Lid van de werkgroep</h3>
+        <p>We zijn een kleine groep en kunnen er altijd iemand bij hebben. Je helpt mee met plannen en aanwezig zijn op de dag zelf. Denk aan contact met boom-eigenaren, schillers, verkopers, De Korenhof en het AZC.</p>
         <ul class="micro-taken">
           <li>Paar keer per jaar vergaderen</li>
-          <li>Contact met boom-eigenaren</li>
           <li>Aanwezig op plukdag en schilmomenten</li>
         </ul>
         <a href="#aanmelden" class="micro-cta">Ik wil meer doen →</a>
@@ -216,7 +215,6 @@ layout: default
         <ul class="micro-taken">
           <li>Boomadres doorgeven</li>
           <li>Wij komen plukken</li>
-          <li>Je mag zelf ook appels houden</li>
         </ul>
         <a href="#aanmelden" class="micro-cta">Boom aanmelden →</a>
       </div>
@@ -233,7 +231,7 @@ layout: default
     <p style="color:var(--tekst-zacht);margin-top:.5rem;line-height:1.7;max-width:500px;"></p>
     <ul class="namen-grid" aria-label="Werkgroepleden">
       {% for lid in site.data.werkgroep.leden %}
-      <li class="naam-chip">{{ lid }}</li>
+      <li class="naam-chip"><a href="mailto:info@plukendeel.nl">{{ lid }}</a></li>
       {% endfor %}
     </ul>
   </div>
