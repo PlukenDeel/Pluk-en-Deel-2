@@ -5,23 +5,23 @@ items:
     datums:
       - datum: zaterdag 19 september
         iso: '2026-09-19'
-        detail: Reservedag is zaterdag 26 september.
-    tip: "🍎 Wie meeplukt mag een zak appels mee naar huis nemen. Appels van je eigen boom? Neem contact op en we halen ze op."
+        detail: Reservedag is zaterdag 26 september. Als je zelf al hebt geplukt en (grote) appels wilt delen met ons, geef een seintje, dan halen we de dozen/kisten op.
+    tip: "🍎 Wie meeplukt mag een zak appels mee naar huis nemen."
   - titel: Potten inzamelen
     emoji: 🏡
     kleur: groen
     datums:
       - datum: Vanaf nu
         iso: ''
-        detail: Breng lege potten naar Klooster 2 in Zweeloo, in de kast rechts van de ingang, onderste plank.
+        detail: Breng lege potten naar Klooster 2 in Zweeloo, in de kast rechts van de oprit, onderste plank.
     tip: Wij kunnen alleen potten gebruiken die schoon zijn, met metalen deksel en zonder etiketten.
   - titel: Schil- & moesmomenten
     emoji: 🔪
     kleur: rood
     datums:
-      - datum: Datum volgt
+      - datum: donderdagmiddagen 8 en 29 okt en 12 nov. Allemaal om 13.30 in De Korenhof.
         iso: ''
-        detail: Wordt binnenkort bekendgemaakt.
+        detail: Een gezellige middag in de Korenhof, er wordt geschild, gekookt en alles in potten gedaan.
     tip: Neem een eigen favoriete schilmesje mee!
   - titel: Verkopen bij de PLUS
     emoji: 🛒
