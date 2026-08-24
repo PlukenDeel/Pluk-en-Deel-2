@@ -23,7 +23,7 @@ items:
         iso: ''
         detail: Een gezellige middag in de Korenhof, er wordt geschild, gekookt en alles in potten gedaan.
     tip: Neem een eigen favoriete schilmesje mee!
-  - titel: Verkopen bij de PLUS
+  - titel: Verkopen bij de PLUS tijdens de schoolvakanties.
     emoji: 🛒
     kleur: geel
     datums:
@@ -36,4 +36,4 @@ items:
       - datum: Kerstvakantie
         iso: '2026-12-19'
         detail: Zaterdag 19 december t/m zaterdag 3 januari.
-    tip: ''
+    tip: 'Mocht je ons verkooppunt zien staan, wandel dan langs en koop een potje voor het goede doel.'
