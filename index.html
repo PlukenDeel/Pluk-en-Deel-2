@@ -92,32 +92,43 @@ layout: default
       <strong>Kom helpen — schillers, kokers en verkopers gezocht</strong>
       <p>Op donderdag 29 oktober schillen en koken we opnieuw bij De Korenhof in Aalden, vanaf 13.30 uur. De komende weken staan we ook op meerdere plekken te verkopen: vrijdag 16 en zaterdag 17 oktober bij de PLUS in Aalden, vrijdag 23 en 24 oktober ook, en zaterdag 7 november op de interne markt in De Korenhof. Heb je een paar uur vrij? Je bent van harte welkom — meld je aan via de website of mail <a href="mailto:info@plukendeel.nl">info@plukendeel.nl</a>.</p>
     </div>
-    <div class="nieuws-grid">
-      {% for bericht in site.data.nieuws.items limit:4 %}
-      <article class="nieuws-kaart">
-        {% if bericht.foto %}
-        <img class="nieuws-foto" src="{{ bericht.foto | prepend: site.baseurl }}" alt="{{ bericht.foto_alt }}" loading="lazy">
-        {% endif %}
-        <div class="nieuws-datum">{{ bericht.datum }}</div>
-        <h3>{{ bericht.titel }}</h3>
-        <p>{{ bericht.tekst }}</p>
-      </article>
+    <div class="nieuws-acc">
+      {% for bericht in site.data.nieuws.items %}
+      <div class="acc-row{% if forloop.first %} open{% endif %}">
+        <button class="acc-kop" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}">
+          <div class="acc-kop-tekst">
+            <div class="nieuws-datum">{{ bericht.datum }}</div>
+            <h3>{{ bericht.titel }}</h3>
+          </div>
+          <svg class="acc-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="acc-body">
+          {% if bericht.foto %}
+          <img class="acc-foto" src="{{ bericht.foto | prepend: site.baseurl }}" alt="{{ bericht.foto_alt }}" loading="lazy">
+          {% endif %}
+          <p>{{ bericht.tekst }}</p>
+        </div>
+      </div>
       {% endfor %}
     </div>
-    {% if site.data.nieuws.items.size > 4 %}
-    <div class="nieuws-grid nieuws-grid--klein">
-      {% for bericht in site.data.nieuws.items offset:4 %}
-      <article class="nieuws-kaart nieuws-kaart--klein">
-        {% if bericht.foto %}
-        <img class="nieuws-foto" src="{{ bericht.foto | prepend: site.baseurl }}" alt="{{ bericht.foto_alt }}" loading="lazy">
-        {% endif %}
-        <div class="nieuws-datum">{{ bericht.datum }}</div>
-        <h3>{{ bericht.titel }}</h3>
-        <p>{{ bericht.tekst }}</p>
-      </article>
-      {% endfor %}
-    </div>
-    {% endif %}
+    <script>
+    document.querySelectorAll('.acc-kop').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var row=btn.closest('.acc-row');
+        var wasOpen=row.classList.contains('open');
+        document.querySelectorAll('.acc-row').forEach(function(r){
+          r.classList.remove('open');
+          r.querySelector('.acc-kop').setAttribute('aria-expanded','false');
+        });
+        if(!wasOpen){
+          row.classList.add('open');
+          btn.setAttribute('aria-expanded','true');
+        }
+      });
+    });
+    </script>
   </div>
 </section>
 {% endif %}
