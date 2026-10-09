@@ -19,15 +19,27 @@ items:
     emoji: 🔪
     kleur: rood
     datums:
-      - datum: donderdagmiddagen 8 en 29 okt en 12 nov. 
-        iso: ''
-        detail: Een gezellige middag in de Korenhof begint om 13.30 uur, er wordt geschild, gekookt en alles in potten gedaan.
+      - datum: donderdag 8 oktober, 13.30 uur
+        iso: '2026-10-08'
+        detail: De Korenhof, Aalden.
+      - datum: donderdag 29 oktober, 13.30 uur
+        iso: '2026-10-29'
+        detail: De Korenhof, Aalden.
+      - datum: donderdag 12 november, 13.30 uur
+        iso: '2026-11-12'
+        detail: De Korenhof, Aalden.
     tip: Neem een eigen favoriete schilmesje mee!
-  - titel: Verkopen bij de PLUS tijdens de schoolvakanties.
+  - titel: Verkopen
     emoji: 🛒
     kleur: geel
     datums:
-      - datum: Tijdens de herfst- en kerstvakantie en rond Sinterklaas
-        iso: ''
-        detail: ''
+      - datum: vrijdag 16 en zaterdag 17 oktober
+        iso: '2026-10-16'
+        detail: Bij de PLUS in Aalden.
+      - datum: vrijdag 23 en zaterdag 24 oktober
+        iso: '2026-10-23'
+        detail: Bij de PLUS in Aalden.
+      - datum: zaterdag 7 november
+        iso: '2026-11-07'
+        detail: Interne markt in De Korenhof, Aalden.
     tip: 'Mocht je ons verkooppunt zien staan, wandel dan langs en koop een potje voor het goede doel.'

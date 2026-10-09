@@ -196,6 +196,10 @@ section { padding: 5rem 2rem; }
 .nieuws-kaart .nieuws-datum { margin-top: 1.5rem; font-size: .8rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--rood); }
 .nieuws-kaart h3 { margin-top: .5rem; }
 .nieuws-kaart p { margin-bottom: 1.5rem; color: var(--tekst-zacht); line-height: 1.7; }
+.nieuws-grid--klein { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.nieuws-kaart--klein .nieuws-foto { height: 110px; }
+.nieuws-kaart--klein h3 { font-size: 1rem; }
+.nieuws-kaart--klein p { font-size: .85rem; line-height: 1.6; }
 
 .micro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
 .micro-kaart { border-radius: 20px; padding: 2rem; border: 2px solid var(--creme-donker); background: #fff; transition: transform var(--overgang), box-shadow var(--overgang), border-color var(--overgang); }
@@ -392,6 +396,7 @@ address { font-style: normal; }
   .over-grid { grid-template-columns: 1fr; gap: 2rem; }
   .agenda-grid { grid-template-columns: 1fr; }
   .nieuws-grid { grid-template-columns: 1fr; }
+  .nieuws-grid--klein { grid-template-columns: 1fr 1fr; }
   .galerij-grid { grid-template-columns: 1fr; }
   .micro-grid { grid-template-columns: 1fr; }
   .impact-grid { grid-template-columns: repeat(2, 1fr); }
