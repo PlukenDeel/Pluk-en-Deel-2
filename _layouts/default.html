@@ -72,6 +72,7 @@
 
  
 <body>
+{% assign nav_pad = "" %}{% if page.url != "/" %}{% assign nav_pad = "/" | prepend: site.baseurl %}{% endif %}
 
   <a href="#main" class="skip-link">Direct naar inhoud</a>
 
@@ -83,13 +84,13 @@
              style="height:36px;width:auto;vertical-align:middle;">
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#over">Over ons</a></li>
-        {% if site.data.nieuws.items.size > 0 %}<li><a href="#nieuws">Nieuws</a></li>{% endif %}
-        <li><a href="#agenda">Agenda</a></li>
-        {% if site.data.fotos.items.size > 0 %}<li><a href="#fotos">Foto's</a></li>{% endif %}
-        <li><a href="#meedoen">Meedoen</a></li>
-        <li><a href="#tijdlijn">Tijdlijn</a></li>
-        <li><a href="#aanmelden" class="nav-cta">Aanmelden →</a></li>
+        <li><a href="{{ nav_pad }}#over">Over ons</a></li>
+        {% if site.data.nieuws.items.size > 0 %}<li><a href="{{ nav_pad }}#nieuws">Nieuws</a></li>{% endif %}
+        <li><a href="{{ nav_pad }}#agenda">Agenda</a></li>
+        {% if site.data.fotos.items.size > 0 %}<li><a href="{{ nav_pad }}#fotos">Foto's</a></li>{% endif %}
+        <li><a href="{{ nav_pad }}#meedoen">Meedoen</a></li>
+        <li><a href="{{ nav_pad }}#tijdlijn">Tijdlijn</a></li>
+        <li><a href="{{ nav_pad }}#aanmelden" class="nav-cta">Aanmelden →</a></li>
       </ul>
       <button class="hamburger" id="hamburger"
         aria-label="Navigatiemenu openen"
@@ -113,17 +114,17 @@
       <nav class="footer-col" aria-label="Footernavigatie">
         <h4>Navigatie</h4>
         <ul>
-          <li><a href="#over">Over Pluk &amp; Deel</a></li>
-          <li><a href="#agenda">Agenda {{ site.data.algemeen.seizoen }}</a></li>
-          <li><a href="#meedoen">Meedoen</a></li>
-          <li><a href="#tijdlijn">Tijdlijn</a></li>
+          <li><a href="{{ nav_pad }}#over">Over Pluk &amp; Deel</a></li>
+          <li><a href="{{ nav_pad }}#agenda">Agenda {{ site.data.algemeen.seizoen }}</a></li>
+          <li><a href="{{ nav_pad }}#meedoen">Meedoen</a></li>
+          <li><a href="{{ nav_pad }}#tijdlijn">Tijdlijn</a></li>
           <li><a href="{{ '/privacy.html' | prepend: site.baseurl }}" class="privacy-trigger">Privacyverklaring</a></li>
         </ul>
       </nav>
       <address class="footer-col">
         <h4>Contact</h4>
         <ul>
-          <li><a href="#aanmelden">Aanmeldformulier</a></li>
+          <li><a href="{{ nav_pad }}#aanmelden">Aanmeldformulier</a></li>
           <li><a href="mailto:{{ site.data.algemeen.email }}">{{ site.data.algemeen.email }}</a></li>
           <li>
             <a href="tel:+31645288841" aria-label="Bel Trees, telefoonnummer 06 45 28 88 41">

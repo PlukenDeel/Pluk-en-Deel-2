@@ -1,0 +1,189 @@
+---
+layout: default
+title: "Appel-kaneel muffins"
+description: "Recept voor appel-kaneel muffins van Mary Berry, een mooie bestemming voor de appels van Pluk & Deel. Kies zelf voor hoeveel muffins je de hoeveelheden wilt zien."
+---
+<style>
+/* Receptpagina: gebruikt de kleuren en lettertypes uit main.css */
+.recept-hero{min-height:0;padding-bottom:3.5rem}
+.recept-hero .hero-inner{padding-top:3rem;padding-bottom:1rem}
+.recept-hero .hero-logo-wrap{flex-basis:200px}
+.recept-feiten{display:flex;gap:.6rem;flex-wrap:wrap}
+.recept-feit{background:rgba(255,255,255,.14);color:#fff;border-radius:100px;padding:.45rem 1rem;font-size:.9rem}
+.recept-feit b{color:var(--geel);font-weight:600}
+.recept-sectie{background:var(--creme)}
+.recept-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:3rem;align-items:start}
+.recept-kaart{background:var(--groen);color:#fff;border-radius:24px;padding:2rem;position:relative;overflow:hidden}
+.recept-kaart::after{content:'🍎';position:absolute;font-size:8rem;bottom:-1.5rem;right:-1rem;opacity:.1;pointer-events:none}
+.recept-kaart h2{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:1.7rem;margin-bottom:.4rem}
+.recept-kaart h3{font-family:'Playfair Display',Georgia,serif;color:var(--geel);font-style:italic;font-size:1.1rem;margin:1.4rem 0 .5rem}
+.recept-aantal{margin:.8rem 0 .2rem}
+.recept-aantal legend{font-size:.9rem;opacity:.9;margin-bottom:.5rem;padding:0}
+.recept-aantal-rij{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.recept-aantal button{font:inherit;font-size:.95rem;font-weight:600;border:2px solid rgba(255,255,255,.55);background:transparent;color:#fff;border-radius:100px;min-width:3rem;padding:.35rem 1rem;cursor:pointer;transition:background var(--overgang),border-color var(--overgang)}
+.recept-aantal button:hover{border-color:#fff;background:rgba(255,255,255,.12)}
+.recept-aantal button[aria-pressed="true"]{background:var(--geel);color:var(--bruin);border-color:var(--geel)}
+.recept-eigen{display:flex;align-items:center;gap:.5rem;margin-left:.4rem;font-size:.9rem}
+.recept-eigen input{width:4.5rem;font:inherit;padding:.35rem .6rem;border-radius:100px;border:2px solid rgba(255,255,255,.55);background:rgba(255,255,255,.1);color:#fff}
+.recept-eigen input::placeholder{color:rgba(255,255,255,.75)}
+.recept-eigen input:focus-visible{outline:3px solid #fff}
+.recept-ing{list-style:none;display:flex;flex-direction:column;gap:.3rem}
+.recept-ing label{display:flex;gap:.75rem;align-items:flex-start;cursor:pointer;line-height:1.45;padding:.25rem 0}
+.recept-ing input{position:absolute;opacity:0}
+.recept-vink{flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:var(--geel);color:var(--bruin);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;margin-top:1px}
+.recept-vink::before{content:'✓'}
+.recept-ing input:focus-visible+.recept-vink{outline:3px solid #fff;outline-offset:2px}
+.recept-ing input:checked+.recept-vink{background:rgba(255,255,255,.25);color:transparent}
+.recept-ing input:checked~.recept-tekst{text-decoration:line-through;opacity:.6}
+.recept-ing b{font-weight:600;color:var(--geel);font-variant-numeric:tabular-nums}
+.recept-ing small{display:block;font-size:.82rem;opacity:.85;font-style:italic}
+.recept-stappen{list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:.9rem}
+.recept-stappen li{counter-increment:s;background:#fff;border-radius:20px;border-left:5px solid var(--rood);padding:1.2rem 1.4rem 1.2rem 4rem;position:relative;box-shadow:0 4px 20px rgba(0,0,0,.06);color:var(--tekst-zacht);line-height:1.6;transition:transform var(--overgang),box-shadow var(--overgang)}
+.recept-stappen li:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.1)}
+.recept-stappen li::before{content:counter(s);position:absolute;left:1.1rem;top:1.1rem;width:2rem;height:2rem;border-radius:50%;background:var(--rood);color:#fff;font-family:'Playfair Display',Georgia,serif;font-weight:700;display:flex;align-items:center;justify-content:center}
+.recept-stappen li.groen{border-left-color:var(--groen)}.recept-stappen li.groen::before{background:var(--groen)}
+.recept-stappen li.geel{border-left-color:#e8a020}.recept-stappen li.geel::before{background:var(--geel);color:var(--bruin)}
+.recept-stappen strong{display:block;font-family:'Playfair Display',Georgia,serif;color:var(--tekst);font-size:1.05rem;margin-bottom:.15rem}
+.recept-tip{display:block;margin-top:.7rem;background:var(--creme);border-radius:8px;padding:.6rem .9rem;font-size:.85rem;font-style:italic}
+.recept-oven{display:inline-block;background:var(--creme-donker);color:var(--bruin);border-radius:100px;padding:.05rem .7rem;font-size:.85rem;font-weight:600}
+.recept-acties{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.5rem}
+.recept-acties .btn-primary{border:0;cursor:pointer;font-size:1rem}
+.recept-acties .btn-terug{border:2px solid var(--groen);color:var(--groen);padding:.9rem 2rem;border-radius:100px;text-decoration:none;font-weight:600}
+@media (max-width:820px){.recept-grid{grid-template-columns:minmax(0,1fr);gap:2.2rem}.recept-kaart{padding:1.5rem}}
+@media print{
+  .site-header,footer,.skip-link,.recept-aantal,.recept-acties,.apple,.recept-kaart::after{display:none!important}
+  body{background:#fff}
+  .hero,.recept-hero{background:none!important;min-height:0;padding:0}
+  .hero-logo-wrap{display:none}
+  .recept-hero h1,.recept-hero .hero-sub{color:#000;text-shadow:none}.recept-hero h1 em{color:#2d6a2d}
+  .hero-badge{background:none;border:1px solid #000;color:#000}
+  .recept-feit{background:none;color:#000;border:1px solid #999}.recept-feit b{color:#000}
+  .recept-kaart{background:none;color:#000;border-radius:0;padding:0}
+  .recept-kaart h3{color:#2d6a2d}.recept-ing b{color:#000}.recept-vink{background:none;border:1px solid #2d6a2d;color:transparent}
+  section{padding:1rem 0}
+  .recept-grid{grid-template-columns:62mm 1fr;gap:6mm;font-size:10pt}
+  .recept-stappen{gap:.4rem}.recept-stappen li{box-shadow:none;border-radius:0;border-left:0;padding:0 0 0 2rem;break-inside:avoid}
+  .recept-stappen li::before{width:1.4rem;height:1.4rem;top:0;left:0;font-size:.75rem;background:#c0392b!important;color:#fff!important}
+  .recept-tip{background:none;padding:0;margin-top:.2rem}
+}
+</style>
+
+<section class="hero recept-hero" id="top" aria-label="Recept">
+  <div class="hero-inner">
+    <div class="hero-logo-wrap">
+      <img src="{{ '/images/pluk_en_deel_logo.png' | prepend: site.baseurl }}" alt="Pluk & Deel logo" class="hero-logo" />
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">🍏 Recept van Mary Berry</div>
+      <h1>Appel-kaneel <em>muffins</em></h1>
+      <p class="hero-sub">Luchtige muffins met stukjes appel en een knapperig kaneelstrooisel. Een mooie bestemming voor de appels die we plukken.</p>
+      <div class="recept-feiten">
+        <span class="recept-feit"><b id="receptAantalKop">12</b> muffins</span>
+        <span class="recept-feit"><b>±35</b> min. bakken</span>
+        <span class="recept-feit"><b>200°C</b> daarna 175°C</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recept-sectie" aria-label="Ingrediënten en bereiding">
+  <div class="container recept-grid">
+    <div class="recept-kaart">
+      <h2>Ingrediënten</h2>
+      <fieldset class="recept-aantal" style="border:0">
+        <legend>Voor hoeveel muffins wil je bakken?</legend>
+        <div class="recept-aantal-rij">
+          <button type="button" data-n="6" aria-pressed="false">6</button>
+          <button type="button" data-n="12" aria-pressed="true">12</button>
+          <button type="button" data-n="18" aria-pressed="false">18</button>
+          <button type="button" data-n="24" aria-pressed="false">24</button>
+          <label class="recept-eigen" for="receptEigen">of <input type="number" id="receptEigen" min="1" max="100" inputmode="numeric" placeholder="eigen"> stuks</label>
+        </div>
+      </fieldset>
+      <p id="receptEiNoot" style="font-size:.82rem;font-style:italic;opacity:.85;margin-top:.4rem" hidden>Eieren zijn afgerond op hele eieren.</p>
+      <p id="receptStatus" class="sr-only" aria-live="polite" style="position:absolute;left:-9999px"></p>
+      <h3>Voor het strooisel</h3>
+      <ul class="recept-ing" id="receptStrooisel"></ul>
+      <h3>Voor de muffins</h3>
+      <ul class="recept-ing" id="receptMuffin"></ul>
+    </div>
+
+    <div>
+      <p class="section-label">Aan de slag</p>
+      <h2 class="section-title">Zo maak je <em>de muffins</em></h2>
+      <ol class="recept-stappen">
+        <li><strong>Oven en vormen</strong>Verwarm de oven voor op <span class="recept-oven">200°C</span>. Zet <span class="recept-n">12</span> papieren muffinvormpjes in de bakplaat.</li>
+        <li class="groen"><strong>Strooisel maken</strong>Meng de bloem, suikers en kaneel. Voeg de gesmolten boter toe en meng met een vork tot er kruimels ontstaan. Zet opzij.</li>
+        <li><strong>Droge ingrediënten</strong>Meng in een kom de bloem, het bakpoeder, de kaneel en het zout.</li>
+        <li class="geel"><strong>Appel bloemen</strong>Lepel in een aparte kom een beetje van het bloemmengsel door de appelblokjes.<span class="recept-tip">Zo zakken niet alle blokjes naar de bodem van de muffin.</span></li>
+        <li><strong>Boter en suiker kloppen</strong>Klop in een grote kom met de mixer of keukenmachine de boter en suikers licht van kleur en erg luchtig. Dat duurt minimaal 2 minuten.</li>
+        <li><strong>Eieren en vanille</strong>Voeg de eieren één voor één toe en klop goed. Voeg daarna de vanille-extract toe.</li>
+        <li class="groen"><strong>Afwisselend roeren</strong>Roer met de hand voorzichtig 1/3 van het bloemmengsel erdoor. Daarna de helft van de melk. Herhaal dit om en om tot alles op is.<span class="recept-tip">Niet langer roeren dan echt nodig is.</span></li>
+        <li><strong>Appel erdoor</strong>Roer voorzichtig de appelblokjes door het beslag.</li>
+        <li><strong>Vullen en bestrooien</strong>Lepel het beslag in de muffinvormpjes en strooi het strooisel erover.</li>
+        <li class="geel"><strong>Bakken</strong>Bak 10 minuten op <span class="recept-oven">200°C</span>. Zet de oven daarna terug naar <span class="recept-oven">175°C</span> en bak nog 12 tot 15 minuten. Steek een satéprikker in het midden van een muffin. Komt die droog eruit, dan zijn ze gaar.<span class="recept-tip">Kleinere muffins zijn eerder klaar.</span></li>
+        <li><strong>Afkoelen</strong>Laat de muffins nog 10 minuten in de bakplaat afkoelen. Laat ze daarna verder afkoelen op een rooster.</li>
+      </ol>
+      <div class="recept-acties">
+        <button type="button" class="btn-primary" id="receptPrint">🖨️ Print dit recept</button>
+        <a class="btn-terug" href="{{ '/' | prepend: site.baseurl }}">← Terug naar Pluk &amp; Deel</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Recipe","name":"Appel-kaneel muffins","author":{"@type":"Person","name":"Mary Berry"},"recipeYield":"12 muffins","totalTime":"PT35M","recipeCategory":"Gebak","recipeIngredient":["60 g tarwebloem","55 g gouden basterdsuiker","50 g kristalsuiker","½ theelepel kaneel","43 g gesmolten ongezouten boter","240 g tarwebloem","1½ theelepel bakpoeder","1½ theelepel kaneel","½ theelepel zout","113 g ongezouten boter","110 g gouden basterdsuiker","110 g kristalsuiker","2 eieren","1 theelepel vanille-extract","120 ml volle melk","220 g appels in blokjes"]}
+</script>
+<script>
+(function(){
+  // [hoeveelheid bij 12 muffins, eenheid, naam, toelichting]
+  var S=[[60,'g','tarwebloem'],[55,'g','gouden basterdsuiker'],[50,'g','kristalsuiker'],[0.5,'theelepel','kaneel, gemalen'],[43,'g','gesmolten ongezouten boter']];
+  var M=[[240,'g','tarwebloem'],[1.5,'theelepel','bakpoeder'],[1.5,'theelepel','kaneel, gemalen'],[0.5,'theelepel','zout'],
+    [113,'g','ongezouten boter, op kamertemperatuur'],[110,'g','gouden basterdsuiker'],[110,'g','kristalsuiker'],[2,'',''],
+    [1,'theelepel','vanille-extract'],[120,'ml','volle melk'],
+    [220,'g','appels, in blokjes','2 tot 4 appels zonder schil en klokhuis. Iets meer appel mag ook.']];
+  function breuk(x){
+    var w=Math.floor(x+1e-9),f=x-w,t='';
+    if(f>=.98){w++;f=0}
+    if(Math.abs(f-.25)<.03)t='¼';else if(Math.abs(f-.5)<.03)t='½';else if(Math.abs(f-.75)<.03)t='¾';
+    else if(f>=.03){return String(Math.round(x*10)/10).replace('.',',')}
+    return (w?w:'')+(w&&t?' ':'')+t||'0';
+  }
+  function hoeveel(v,u,n){
+    var x=v*n/12;
+    if(u==='g'||u==='ml')return Math.round(x)+' '+u;
+    if(u==='theelepel')return breuk(Math.max(.25,Math.round(x*4)/4))+' theelepel';
+    var e=Math.max(1,Math.round(x));
+    return e+(e===1?' ei':' eieren');
+  }
+  function vul(id,lijst,n){
+    var ul=document.getElementById(id),aan={};
+    ul.querySelectorAll('input').forEach(function(i){aan[i.id]=i.checked});
+    ul.innerHTML='';
+    lijst.forEach(function(r,k){
+      var li=document.createElement('li'),cid=id+k;
+      var tekst=r[2].replace(/&/g,'&amp;').replace(/</g,'&lt;');
+      li.innerHTML='<label><input type="checkbox" id="'+cid+'"><span class="recept-vink" aria-hidden="true"></span><span class="recept-tekst"><b>'+hoeveel(r[0],r[1],n)+'</b> '+(r[1]===''?'':tekst)+(r[3]?'<small>'+r[3]+'</small>':'')+'</span></label>';
+      if(aan[cid])li.querySelector('input').checked=true;
+      ul.appendChild(li);
+    });
+  }
+  function zet(n){
+    vul('receptStrooisel',S,n);vul('receptMuffin',M,n);
+    document.getElementById('receptAantalKop').textContent=n;
+    document.getElementById('receptEiNoot').hidden=(n%6===0);
+    document.querySelectorAll('.recept-n').forEach(function(e){e.textContent=n});
+    document.getElementById('receptStatus').textContent='Hoeveelheden aangepast voor '+n+' muffins.';
+    document.querySelectorAll('.recept-aantal button').forEach(function(b){b.setAttribute('aria-pressed',(+b.dataset.n===n)?'true':'false')});
+  }
+  document.querySelectorAll('.recept-aantal button').forEach(function(b){
+    b.addEventListener('click',function(){document.getElementById('receptEigen').value='';zet(+b.dataset.n)});
+  });
+  document.getElementById('receptEigen').addEventListener('input',function(){
+    var n=parseInt(this.value,10);if(n>=1&&n<=100)zet(n);
+  });
+  document.getElementById('receptPrint').addEventListener('click',function(){window.print()});
+  zet(12);
+})();
+</script>
