@@ -158,6 +158,12 @@ collections:
                 widget: "string"
                 required: false
 
+              - label: "Uitsnede foto (optioneel)"
+                name: "foto_positie"
+                widget: "string"
+                required: false
+                hint: "Welk deel van de foto zichtbaar blijft, bijv. 50% 10% (hoog) of 50% 50% (midden). Het tweede getal is de hoogte: 0% = bovenkant, 100% = onderkant."
+
   # ─── FOTOGALERIJ ─────────────────────────────────────────────────
   - name: "fotogalerij"
     label: "🖼️ Fotogalerij"

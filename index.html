@@ -103,7 +103,7 @@ layout: default
         </button>
         <div class="acc-body">
           {% if bericht.foto %}
-          <img class="acc-foto" src="{{ bericht.foto | prepend: site.baseurl }}" alt="{{ bericht.foto_alt }}" loading="lazy">
+          <img class="acc-foto" src="{{ bericht.foto | prepend: site.baseurl }}" alt="{{ bericht.foto_alt }}" loading="lazy"{% if bericht.foto_positie %} style="object-position: {{ bericht.foto_positie }}"{% endif %}>
           {% endif %}
           <p>{{ bericht.tekst }}</p>
         </div>
