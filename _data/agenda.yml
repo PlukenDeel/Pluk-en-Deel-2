@@ -28,6 +28,9 @@ items:
       - datum: zaterdag 7 november, 13.00 - 16.00 uur
         iso: '2026-11-07'
         detail: Fair Groen Coevorden in de verwarmde schuur van de gemeentewerf, Klooster 56 in Zweeloo. Onderdeel van de klimaatweek van de gemeente Coevorden.
+      - datum: vrijdag 4 en zaterdag 5 december
+        iso: '2026-12-04'
+        detail: Bij de PLUS in Aalden, rond Sinterklaas.
       - datum: vrijdag 18 en zaterdag 19 december
         iso: '2026-12-18'
         detail: Bij de PLUS in Aalden, bij de start van de kerstvakantie.
