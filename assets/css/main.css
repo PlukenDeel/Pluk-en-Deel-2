@@ -190,6 +190,9 @@ section { padding: 5rem 2rem; }
 .oproep-banner strong { display: block; font-size: 1.15rem; margin-bottom: .5rem; }
 .oproep-banner p { margin: 0; line-height: 1.7; opacity: .95; }
 .oproep-banner a { color: #fff; text-decoration: underline; }
+.oproep-lijst { list-style: none; margin: 0 0 1rem; padding: 0; line-height: 1.6; }
+.oproep-lijst li { padding: .35rem 0; border-bottom: 1px solid rgba(255,255,255,.25); }
+.oproep-lijst li:last-child { border-bottom: none; }
 .nieuws-acc { border: 1.5px solid var(--creme-donker); border-radius: 16px; overflow: hidden; margin-top: 2rem; }
 .acc-row { border-bottom: 1px solid var(--creme-donker); }
 .acc-row:last-child { border-bottom: none; }
