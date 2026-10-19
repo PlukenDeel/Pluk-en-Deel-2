@@ -1,12 +1,4 @@
 items:
-  - titel: Plukdag
-    emoji: 🧺
-    kleur: rood
-    datums:
-      - datum: zaterdag 19 september
-        iso: '2026-09-19'
-        detail: Reservedag is zaterdag 26 september. Als je zelf al hebt geplukt en (grote) appels wilt delen met ons, geef een seintje, dan halen we de dozen/kisten op.
-    tip: "🍎 Wie meeplukt mag een zak appels mee naar huis nemen."
   - titel: Potten inzamelen
     emoji: 🏡
     kleur: groen
@@ -19,9 +11,6 @@ items:
     emoji: 🔪
     kleur: rood
     datums:
-      - datum: donderdag 8 oktober, 13.30 uur
-        iso: '2026-10-08'
-        detail: De Korenhof, Aalden.
       - datum: donderdag 29 oktober, 13.30 uur
         iso: '2026-10-29'
         detail: De Korenhof, Aalden.
@@ -33,9 +22,6 @@ items:
     emoji: 🛒
     kleur: geel
     datums:
-      - datum: vrijdag 16 en zaterdag 17 oktober
-        iso: '2026-10-16'
-        detail: Bij de PLUS in Aalden.
       - datum: vrijdag 23 en zaterdag 24 oktober
         iso: '2026-10-23'
         detail: Bij de PLUS in Aalden.
