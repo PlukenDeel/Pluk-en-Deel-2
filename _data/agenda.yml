@@ -11,23 +11,14 @@ items:
     emoji: 🔪
     kleur: rood
     datums:
-      - datum: donderdag 29 oktober, 13.30 uur
-        iso: '2026-10-29'
-        detail: De Korenhof, Aalden.
       - datum: donderdag 12 november, 13.30 uur
         iso: '2026-11-12'
         detail: De Korenhof, Aalden.
     tip: Neem een eigen favoriete schilmesje mee!
-  - titel: Verkopen
+  - titel: Verkopen bij de PLUS
     emoji: 🛒
     kleur: geel
     datums:
-      - datum: zaterdag 7 november, 10.00 - 14.00 uur
-        iso: '2026-11-07'
-        detail: Interne markt in De Korenhof, Aalden.
-      - datum: zaterdag 7 november, 13.00 - 16.00 uur
-        iso: '2026-11-07'
-        detail: Fair Groen Coevorden in de verwarmde schuur van de gemeentewerf, Klooster 56 in Zweeloo. Onderdeel van de klimaatweek van de gemeente Coevorden.
       - datum: vrijdag 4 en zaterdag 5 december, 10.00 - 14.00 uur
         iso: '2026-12-04'
         detail: Bij de PLUS in Aalden, rond Sinterklaas (tijden voorlopig).
