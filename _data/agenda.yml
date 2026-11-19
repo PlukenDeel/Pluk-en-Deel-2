@@ -7,14 +7,6 @@ items:
         iso: ''
         detail: Breng lege potten naar Klooster 2 in Zweeloo, in de kast rechts van de oprit, onderste plank.
     tip: Wij kunnen alleen potten gebruiken die schoon zijn, met metalen deksel en zonder etiketten.
-  - titel: Schil- & moesmomenten
-    emoji: 🔪
-    kleur: rood
-    datums:
-      - datum: donderdag 12 november, 13.30 uur
-        iso: '2026-11-12'
-        detail: De Korenhof, Aalden.
-    tip: Neem een eigen favoriete schilmesje mee!
   - titel: Verkopen bij de PLUS
     emoji: 🛒
     kleur: geel
